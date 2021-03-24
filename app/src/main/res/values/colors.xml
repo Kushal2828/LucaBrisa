@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#E20074</color>
+    <color name="purple_500">#E20074</color>
+    <!--statusbar color-->
+    <color name="purple_700">#880E4F</color>
+    <color name="teal_200">#E20074</color>
+    <color name="teal_700">#E20074</color>
+    <color name="black">#FF000000</color>
+
+    <color name="overlay_light_90">#E6FFFFFF</color>
+
+    <color name="grey_1000">#1a1a1a</color>
+
+    <color name="black_text_color">#1a1a1a</color>
+
+    <color name="textcolor">#57626D</color>
+
+    <color name="title">#323232</color>
+
+    <color name="placeholder">#BBBBBB</color>
+
+    <color name="boarder">#5ABBBBBB</color>
+    <color name="grey">#666666</color>
+
+    <color name="light_grey">#33D3D1D1</color>
+
+    <color name="light_primary">#333651cb</color>
+
+
+    <color name="white">#ffffff</color>
+
+</resources>

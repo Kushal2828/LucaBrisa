@@ -16,17 +16,26 @@
         android:gravity="center|start">
 
         <ImageView
-            android:layout_width="@dimen/_90sdp"
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_back" />
+
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
             android:layout_height="wrap_content"
-
             android:padding="@dimen/_4sdp"
-            android:src="@drawable/logolucabrasi" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:gravity="center"/>
+            android:src="@drawable/lucabraciwhite" />
+        <com.luca.lucabrasi.CustomViews.Textview.MediumTextView
+            android:id="@+id/tvTitle"
+            style="@style/txt_black_large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/home"
+            android:paddingStart="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

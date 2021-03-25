@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.HomeActivity"
+    android:gravity="center"
+    android:orientation="vertical">
+
+<include layout="@layout/toolbar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:orientation="horizontal">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/arbeit"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_7sdp"
+            android:elevation="@dimen/_5sdp"
+            android:layout_gravity=""
+            app:cardCornerRadius="@dimen/_7sdp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/colorbg"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:src="@drawable/ic_delivery_van"
+                    android:scaleType="centerInside"/>
+
+                <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                    style="@style/txt_white_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="@string/arbieit" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tanken"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_7sdp"
+            android:elevation="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_7sdp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/colorbg"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:src="@drawable/ic_gas_station"
+                    android:scaleType="centerInside"
+                    android:padding="@dimen/_9sdp"/>
+
+                <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                    style="@style/txt_white_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="@string/tanken" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_7sdp"
+            android:elevation="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_7sdp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/colorbg"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:src="@drawable/ic_problem"
+                    android:scaleType="centerInside"
+                    android:padding="@dimen/_9sdp"/>
+
+                <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                    style="@style/txt_white_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:maxLines="1"
+                    android:text="@string/promelden" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/logout"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_7sdp"
+            android:elevation="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_7sdp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/colorbg"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:src="@drawable/ic_logout"
+                    android:scaleType="centerInside"
+                    android:padding="@dimen/_9sdp"/>
+
+                <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                    style="@style/txt_white_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="@string/logout" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </GridLayout>
+</LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

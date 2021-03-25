@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Arbeit2Activity"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_15sdp"
+                android:orientation="vertical">
+
+                <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+                    style="@style/txt_black_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/arbiet2"
+                    android:textColor="@color/purple_200"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="8"
+                    android:gravity="center">
+                    <cn.iwgang.countdownview.CountdownView
+                        android:id="@+id/timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:isHideTimeBackground="true"
+                        app:isShowDay="true"
+                        app:isShowHour="true"
+                        app:isShowMillisecond="true"
+                        app:isShowMinute="true"
+                        app:isShowSecond="true"
+                        app:isTimeTextBold="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:suffixGravity="bottom"
+                        app:suffixHour=":"
+                        app:suffixMinute=":"
+                        app:suffixSecond=":"
+                        app:suffixTextColor="@color/textcolor"
+                        app:suffixTextSize="@dimen/_12sdp"
+                        app:timeTextColor="@color/purple_200"
+                        app:timeTextSize="@dimen/_27sdp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                            android:id="@+id/tvfertig"
+                            style="@style/txt_black_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:background="@drawable/colorbg"
+                            android:gravity="center"
+                            android:layout_margin="@dimen/_7sdp"
+                            android:paddingLeft="@dimen/_15sdp"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_15sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:text="@string/fertig"
+                            android:textColor="@color/white" />
+                    </FrameLayout>
+                </LinearLayout>
+
+
+
+
+
+                <!--  <RadioGroup
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/_10sdp"
+                      android:orientation="vertical">-->
+
+
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Activity.ReportActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <include layout="@layout/toolbar" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_15sdp"
+                android:orientation="vertical">
+
+                <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+                    style="@style/txt_black_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/promelden"
+                    android:textColor="@color/purple_200"
+                    android:textStyle="bold" />
+
+
+                <!--  <RadioGroup
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/_10sdp"
+                      android:orientation="vertical">-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+
+
+                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/writepro" />
+
+
+                    <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
+                        android:id="@+id/etstartkilo"
+                        style="@style/txt_black_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="156dp"
+                        android:layout_margin="@dimen/_7sdp"
+                        android:background="@drawable/bg"
+                        android:hint="@string/writepro"
+                        android:gravity="start|top"
+                        android:inputType="textImeMultiLine"
+                        android:lines="5"
+                        android:maxLines="5"
+                        android:minLines="5"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_10sdp" />
+
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:orientation="horizontal">
+
+                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        android:id="@+id/tvsubmit"
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:background="@drawable/colorbg"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/_7sdp"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/submit"
+                        android:textColor="@color/white" />
+                </FrameLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout>

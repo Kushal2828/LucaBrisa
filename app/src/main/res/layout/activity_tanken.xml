@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.TankenActivity">
+
+
+    <include layout="@layout/toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_15sdp"
+                android:orientation="vertical">
+
+                <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+                    style="@style/txt_black_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tanken1"
+                    android:textColor="@color/purple_200"
+                    android:textStyle="bold" />
+
+
+                <!--  <RadioGroup
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/_10sdp"
+                      android:orientation="vertical">-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+
+
+                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/kilostand" />
+
+
+                    <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
+                        android:id="@+id/etstartkilo"
+                        style="@style/txt_black_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/bg"
+                        android:hint="@string/kilometer"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:layout_margin="@dimen/_7sdp"
+                        android:lines="1"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:singleLine="true"
+                        />
+
+
+
+                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/zapfule" />
+
+
+                    <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
+                        android:id="@+id/etzapfule"
+                        style="@style/txt_black_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/bg"
+                        android:hint="@string/zapfulehint"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:layout_margin="@dimen/_7sdp"
+                        android:lines="1"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:singleLine="true"/>
+
+
+                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/disleliter" />
+
+
+                    <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
+                        android:id="@+id/etkenizichen"
+                        style="@style/txt_black_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/bg"
+                        android:hint="@string/disleliterhint"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:layout_margin="@dimen/_7sdp"
+                        android:lines="1"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:singleLine="true"/>
+
+
+
+                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/euro" />
+
+
+                    <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
+                        android:id="@+id/etkenizichen"
+                        style="@style/txt_black_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/bg"
+                        android:hint="@string/eurohint"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:layout_margin="@dimen/_7sdp"
+                        android:lines="1"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:singleLine="true"/>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/_5sdp">
+
+                            <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+                                style="@style/txt_black_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/addblue" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5sdp">
+
+                            <Switch
+                                style="@style/Theme.LucaBrisa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="end" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/_5sdp">
+
+                            <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+                                style="@style/txt_black_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/oilfule" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5sdp">
+
+                            <Switch
+                                style="@style/Theme.LucaBrisa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:orientation="horizontal">
+
+                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        android:id="@+id/tvplayerupdate"
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:background="@drawable/colorbg"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/_7sdp"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/refuleready"
+                        android:textColor="@color/white" />
+                </FrameLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout>

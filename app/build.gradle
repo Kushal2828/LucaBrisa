@@ -51,8 +51,13 @@ dependencies {
     //glide image loader
     implementation 'com.github.bumptech.glide:glide:3.7.0'
 
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
 
     //Use For different resolutions screen
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    implementation 'com.github.iwgang:countdownview:2.1.6'
+
 
 }

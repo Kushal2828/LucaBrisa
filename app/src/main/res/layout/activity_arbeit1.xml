@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.Arbeit1Activity">
+
+
+    <include layout="@layout/toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_15sdp"
+                android:orientation="vertical">
+
+                <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+                    style="@style/txt_black_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/arbiet1"
+                    android:textColor="@color/purple_200"
+                    android:textStyle="bold" />
+
+
+                <!--  <RadioGroup
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/_10sdp"
+                      android:orientation="vertical">-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/station" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@drawable/bg"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/_7sdp"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp">
+
+                        <Spinner
+                            android:id="@+id/spSportcategory"
+                            style="?attr/spinnerDropDownItemStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/array_countries" />
+                    </LinearLayout>
+
+
+                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/startkilo" />
+
+
+                        <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
+                            android:id="@+id/etstartkilo"
+                            style="@style/txt_black_small"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:background="@drawable/bg"
+                            android:hint="@string/kilometer"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:layout_margin="@dimen/_7sdp"
+                            android:lines="1"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/_15sdp"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_15sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:singleLine="true"
+                            />
+
+
+
+                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/kenizichen" />
+
+
+                    <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
+                        android:id="@+id/etkenizichen"
+                        style="@style/txt_black_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/bg"
+                        android:hint="@string/kenizichen"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:layout_margin="@dimen/_7sdp"
+                        android:lines="1"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:singleLine="true"/>
+
+
+                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/trankstand" />
+
+
+                    <SeekBar
+                        android:id="@+id/ettrankstand"
+                        style="@style/Widget.AppCompat.SeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_margin="@dimen/_7sdp"
+                        android:background="@drawable/bg"
+                        android:entries="@array/array_countries" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp">
+                        <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                            style="@style/txt_gray_small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0%"
+                            android:layout_weight="1"/>
+                        <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                            style="@style/txt_gray_small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="100%"/>
+                    </LinearLayout>
+
+                    <!-- <com.example.Sports.CustomViews.Textview.BoldTextView
+                         style="@style/txt_black_small"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/registration_validity" />
+
+                     <com.example.Sports.CustomViews.Textview.LightTextView
+                         android:id="@+id/tvexpiry"
+                         style="@style/txt_black_small"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="@dimen/_3sdp"
+                         android:textColor="@color/colorAccent"
+                         android:text="registration validity" />
+ -->
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:orientation="horizontal">
+
+                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        android:id="@+id/tvplayerupdate"
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:background="@drawable/colorbg"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/_7sdp"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/start"
+                        android:textColor="@color/white" />
+                </FrameLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout>

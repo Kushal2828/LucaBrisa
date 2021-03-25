@@ -3,6 +3,61 @@
 
     <string name="footer">\© LucaBrasi 2021|All rights reserved</string>
     <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="home">Home</string>
+    <string name="gohome">Go To Home</string>
+    <string name="arbieit">Arbeit</string>
+    <string name="tanken">Tanken</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="start">Start</string>
+    <string name="refuleready">Betankung bereit</string>
+    <string name="end">End</string>
+    <string name="choose">Choose</string>
+
+    <string name="promelden">Problem melden 1/1</string>
+    <string name="tanken1">Tanken 1/1</string>
+    <string name="arbiet1">Arbeit 1/4</string>
+    <string name="arbiet2">Arbeit 2/4</string>
+    <string name="arbiet3">Arbeit 3/4</string>
+    <string name="arbiet4">Arbeit 4/4</string>
+
+    <string name="kilostand">Kilometerstand:</string>
+    <string name="zapfule">Zapfsäule:</string>
+    <string name="disleliter">Diesel Liter:</string>
+    <string name="euro">Euro:</string>
+
+    <string name="zapfulehint">Zapfsäule</string>
+    <string name="disleliterhint">Diesel Liter</string>
+    <string name="eurohint">Euro</string>
+
+    <string name="station">Station:</string>
+    <string name="startkilo">Start Kilometer</string>
+    <string name="kenizichen">Kennzeichen:</string>
+    <string name="kenizichenhint">Kennzeichen</string>
+    <string name="trankstand">Tankstand:</string>
+    <string name="kilometer">Kilometer</string>
+    <string name="fertig">Fertig</string>
+    <string name="unfallpassiert">Unfall Passiert ?</string>
+    <string name="addblue">Add Blue getankt:</string>
+    <string name="oilfule">Öl getankt ?</string>
+
+
+    <string name="endkilo">End Kilometer</string>
+    <string name="writepro">Schreiben Porblem:</string>
+    <string name="writeprohint">Schreiben Porblem</string>
+    <string name="submit">Abschicken</string>
+    <string-array name="array_countries">
+        <item>Australia</item>
+        <item>Canada</item>
+        <item>France</item>
+        <item>Japan</item>
+        <item>Rusia</item>
+        <item>USA</item>
+
+
+    </string-array>
 
 
 </resources>

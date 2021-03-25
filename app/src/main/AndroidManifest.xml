@@ -9,8 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LucaBrisa">
-        <activity android:name="com.luca.lucabrasi.Activity.LoginActivity"></activity>
-        <activity android:name="com.luca.lucabrasi.Activity.LauncherActivity">
+        <activity android:name=".Activity.ReportActivity"></activity>
+        <activity android:name=".Activity.TankenActivity" />
+        <activity android:name=".Utils.BaseActivity" />
+        <activity android:name=".Activity.Arbeit4ThankyouActivity" />
+        <activity android:name=".Activity.Arbeit3Activity" />
+        <activity android:name=".Activity.Arbeit2Activity" />
+        <activity android:name=".Activity.Arbeit1Activity" />
+        <activity android:name=".Activity.HomeActivity" />
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.LauncherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

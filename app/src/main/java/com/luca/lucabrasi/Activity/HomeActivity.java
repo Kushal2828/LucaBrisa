@@ -38,6 +38,7 @@ public class HomeActivity extends BaseActivity {
                 startActivity(new Intent(this, ReportActivity.class));
                 break;
             case R.id.logout:
+                mAppPreference.ClearSharedpreference();
                 startActivity(new Intent(this, LoginActivity.class));
                 break;
         }

@@ -2,6 +2,7 @@ package com.luca.lucabrasi.Utils;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,10 +15,12 @@ public class BaseActivity extends AppCompatActivity {
     public Toast backToast;
     TextView tvTitle;
     ImageView imageView;
+   public AppPreference mAppPreference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        mAppPreference = new AppPreference(BaseActivity.this);
     }
     public void setTitle(String title, int gone) {
         tvTitle = (TextView) findViewById(R.id.tvTitle);
@@ -28,5 +31,11 @@ public class BaseActivity extends AppCompatActivity {
         tvTitle.setTextColor(getResources().getColor(R.color.white));
     }
 
+    public void showShortToast(Context context, String msg){
+        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+    }
+    public void showLongToast(Context context,String msg){
+        Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
+    }
 
 }

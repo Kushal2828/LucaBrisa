@@ -54,6 +54,7 @@
 
                 </ImageView>
                     <EditText
+                        android:id="@+id/email"
                         style="@style/txt_white_medium"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_35sdp"
@@ -85,6 +86,7 @@
 
                     </ImageView>
                     <EditText
+                        android:id="@+id/password"
                         style="@style/txt_black_medium"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_35sdp"

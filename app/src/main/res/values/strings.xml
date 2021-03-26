@@ -48,6 +48,9 @@
     <string name="writepro">Schreiben Porblem:</string>
     <string name="writeprohint">Schreiben Porblem</string>
     <string name="submit">Abschicken</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="No_Internet">No Internet Connection</string>
+    <string name="somethingwrong">Something Went Wrong</string>
     <string-array name="array_countries">
         <item>Australia</item>
         <item>Canada</item>

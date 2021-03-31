@@ -31,7 +31,7 @@ public class HomeActivity extends BaseActivity implements OnDataResponseListner 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
-        setTitle("Home",View.GONE);
+        setTitle(getString(R.string.home),View.GONE);
         Log.e("TAG", "onCreate:driverid"+mAppPreference.getMemberID() );
         getstatus();
     }
@@ -82,7 +82,6 @@ public class HomeActivity extends BaseActivity implements OnDataResponseListner 
             case R.id.logout:
                // mAppPreference.ClearSharedpreference();
                 setLogoutDialog(this,getString(R.string.logout),getString(R.string.do_you_really_want_to_signout));
-
                 //startActivity(new Intent(this, LoginActivity.class));
                 break;
         }

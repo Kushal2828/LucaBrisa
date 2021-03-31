@@ -35,7 +35,7 @@ public class ReportActivity extends BaseActivity implements OnDataResponseListne
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
         ButterKnife.bind(this);
-        setTitle("Problem Melden", View.VISIBLE);
+        setTitle(getString(R.string.promeldenheader), View.VISIBLE);
 
     }
 

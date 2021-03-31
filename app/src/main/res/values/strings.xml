@@ -2,21 +2,23 @@
     <string name="app_name">LucaBrisa</string>
 
     <string name="footer">\© LucaBrasi 2021|All rights reserved</string>
-    <string name="login">Login</string>
+    <string name="login">Anmeldung</string>
     <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="home">Home</string>
-    <string name="gohome">Go To Home</string>
+    <string name="password">Passwort</string>
+    <string name="home">Zuhause</string>
+    <string name="gohome">Zur Startseite</string>
     <string name="arbieit">Arbeit</string>
     <string name="tanken">Tanken</string>
     <string name="profile">Profile</string>
-    <string name="logout">Logout</string>
-    <string name="start">Start</string>
+    <string name="logout">Ausloggen</string>
+    <string name="start">Anfang</string>
     <string name="refuleready">Betankung bereit</string>
     <string name="end">End</string>
     <string name="choose">Choose</string>
 
+
     <string name="promelden">Problem melden 1/1</string>
+    <string name="promeldenheader">Problem Melden </string>
     <string name="tanken1">Tanken 1/1</string>
     <string name="arbiet1">Arbeit 1/4</string>
     <string name="arbiet2">Arbeit 2/4</string>
@@ -25,7 +27,7 @@
 
     <string name="kilostand">Kilometerstand:</string>
     <string name="zapfule">Zapfsäule:</string>
-    <string name="disleliter">Diesel Liter:</string>
+    <string name="disleliter">Diesel liters:</string>
     <string name="euro">Euro:</string>
 
     <string name="zapfulehint">Zapfsäule</string>
@@ -45,36 +47,40 @@
 
 
     <string name="endkilo">End Kilometer</string>
-    <string name="writepro">Schreiben Porblem:</string>
-    <string name="writeprohint">Schreiben Porblem</string>
+    <string name="writepro">Schreiben Problem:</string>
+    <string name="hintwritepro">Schreiben Problem</string>
+    <string name="writeprohint">Schreiben Problem</string>
     <string name="submit">Abschicken</string>
-    <string name="please_wait">Please Wait</string>
-    <string name="No_Internet">No Internet Connection</string>
-    <string name="somethingwrong">Something Went Wrong</string>
-    <string name="fuleinfoadded">Fuel Information Added Successfully</string>
-    <string name="plsenterendkilo">Please Enter End Kilometer</string>
-    <string name="dayended">Day Ended Successfully</string>
-    <string name="plsenterfulelevel">Please Enter Valid Fule level</string>
-    <string name="plsentermessage">Please Enter Valid Message</string>
-    <string name="messagesend">Mesage Send Successfully</string>
-    <string name="do_you_really_want_to_signout">Do you Really want to Logout?</string>
-    <string name="cancel">Cancel</string>
-    <string name="sure">Sure</string>
-    <string name="surewanttotime">Do you Really want to Stop timer?</string>
-    <string name="select_station">Select Station</string>
-    <string name="enter_start_kilometer">Enter Start Kilometer</string>
-    <string name="enter_start_kennzeichen">Enter Start Kennzeichen</string>
-    <string name="Alert">Alert</string>
-    <string name="timestoped">Timer Stopped Successfully</string>
-    <string name="pressbackagain_exit">Press Back Again To Exit</string>
-    <string name="entervalid_email">Enter Valid Email</string>
-    <string name="entervalid_password">Enter Valid Password</string>
-    <string name="entervalid_euro">Enter Valid Euro</string>
-    <string name="entervalid_disel">Enter Valid Disel</string>
-    <string name="entervalid_zipcode">Enter valid Zipcode</string>
-    <string name="entervalid_kilometer">Enter Valid Kilometer</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <string name="please_wait">Warten Sie mal</string>
+    <string name="No_Internet">Keine Internetverbindung</string>
+    <string name="somethingwrong">Etwas ist schief gelaufen</string>
+    <string name="fuleinfoadded">Kraftstoffinformationen erfolgreich hinzugefügt</string>
+    <string name="plsenterendkilo">Bitte geben Sie den Endkilometer ein</string>
+    <string name="dayended">Tag erfolgreich beendet</string>
+    <string name="plsenterfulelevel">Bitte geben Sie eine gültige Fule-Stufe ein</string>
+    <string name="plsentermessage">Bitte geben Sie eine gültige Nachricht ein</string>
+    <string name="messagesend">Mesage erfolgreich senden</string>
+    <string name="do_you_really_want_to_signout">Möchten Sie sich wirklich abmelden?</string>
+    <string name="cancel">Stornieren</string>
+    <string name="sure">Sicher</string>
+    <string name="surewanttotime">Möchten Sie den Timer wirklich stoppen?</string>
+    <string name="select_station">Wählen Sie Station</string>
+    <string name="enter_start_kilometer">Startkilometer eingeben</string>
+    <string name="enter_start_kennzeichen">Mark eingeben</string>
+    <string name="Alert">Aufmerksam</string>
+    <string name="timestoped">Timer erfolgreich gestoppt</string>
+    <string name="pressbackagain_exit">Drücken Sie zum Beenden erneut auf Zurück</string>
+    <string name="entervalid_email">Geben Sie eine gültige E-Mail-Adresse ein</string>
+    <string name="entervalid_password">Geben Sie ein gültiges Passwort ein</string>
+    <string name="entervalid_euro">Geben Sie einen gültigen Euro ein</string>
+    <string name="entervalid_disel">Geben Sie Valid Diesel ein</string>
+    <string name="entervalid_zipcode">Geben Sie eine gültige Postleitzahl ein</string>
+    <string name="entervalid_kilometer">Geben Sie einen gültigen Kilometer ein</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="daystarted_successfully">Der Tag begann erfolgreich</string>
+
+
     <string-array name="array_countries">
         <item>Australia</item>
         <item>Canada</item>

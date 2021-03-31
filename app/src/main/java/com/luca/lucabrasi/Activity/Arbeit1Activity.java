@@ -82,8 +82,8 @@ public class Arbeit1Activity extends BaseActivity implements OnDataResponseListn
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arbeit1);
         ButterKnife.bind(this);
-        setTitle("Arbeit", View.GONE);
-        stationlist.add(0, "Select Station");
+        setTitle(getString(R.string.arbieit), View.GONE);
+        stationlist.add(0, getResources().getString(R.string.select_station));
         getstation();
         setFilterAdapter();
         etkenizichen.addTextChangedListener(new TextWatcher() {
@@ -137,7 +137,7 @@ public class Arbeit1Activity extends BaseActivity implements OnDataResponseListn
                 } else {
 
                     selected = false;
-                    locationid = "Select Station";
+                    locationid = getString(R.string.select_station);
                     Log.e(TAG, "onItemSelected: " + locationid);
                 }
 
@@ -213,12 +213,14 @@ public class Arbeit1Activity extends BaseActivity implements OnDataResponseListn
             case R.id.tvstartday:
 
 
-                if (locationid.equals("Select Station")) {
+                if (locationid.equals(getResources().getString(R.string.select_station))) {
                     showShortToast(this, getString(R.string.select_station));
                 } else if (etstartkilo.getText().toString().isEmpty()) {
                     showShortToast(this, getString(R.string.enter_start_kilometer));
                 } else if (etkenizichen.getText().toString().isEmpty()) {
                     showShortToast(this, getString(R.string.enter_start_kennzeichen));
+                }else if(!(ettrankstand.getProgress() >= 0)){
+                    showShortToast(this, getString(R.string.plsenterfulelevel));
                 } else {
                     if (Helper.isNetworkConnected(this)) {
 
@@ -304,7 +306,7 @@ public class Arbeit1Activity extends BaseActivity implements OnDataResponseListn
                         mAppPreference.setDayid(String.valueOf(startdaymodel.data.dayId));
                         Log.e(TAG, "Response:dayid "+mAppPreference.getDayid() );
 
-                        showShortToast(this,"Day Started Successfully");
+                        showShortToast(this,getString(R.string.daystarted_successfully));
                         startActivity(new Intent(this, Arbeit2Activity.class));
                         finish();
                     } else {

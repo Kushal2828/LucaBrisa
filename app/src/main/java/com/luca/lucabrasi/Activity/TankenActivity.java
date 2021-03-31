@@ -80,7 +80,7 @@ public class TankenActivity extends BaseActivity implements OnDataResponseListne
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tanken);
         ButterKnife.bind(this);
-        setTitle("Tanken",View.VISIBLE);
+        setTitle(getString(R.string.tanken),View.VISIBLE);
         getcarlist();
         setFilterAdapter();
 

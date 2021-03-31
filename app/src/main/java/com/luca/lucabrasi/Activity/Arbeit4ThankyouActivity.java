@@ -17,7 +17,7 @@ public class Arbeit4ThankyouActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arbeit4_thankyou);
         ButterKnife.bind(this);
-        setTitle("Arbeit", View.GONE);
+        setTitle(getString(R.string.home), View.GONE);
     }
 
     @OnClick({R.id.tvgotohome})

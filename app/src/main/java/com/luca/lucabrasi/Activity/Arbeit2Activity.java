@@ -71,7 +71,7 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
         setContentView(R.layout.activity_arbeit2);
         ButterKnife.bind(this);
 
-        setTitle("Arbeit", View.GONE);
+        setTitle(getString(R.string.home), View.GONE);
 
         getcurrentTimestamp();
 

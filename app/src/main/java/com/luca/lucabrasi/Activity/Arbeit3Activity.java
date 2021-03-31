@@ -52,7 +52,7 @@ public class Arbeit3Activity extends BaseActivity implements OnDataResponseListn
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arbei3);
         ButterKnife.bind(this);
-        setTitle("Arbeit", View.GONE);
+        setTitle(getString(R.string.home), View.GONE);
 
         isaccident.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

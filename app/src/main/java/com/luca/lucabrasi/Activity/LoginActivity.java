@@ -43,10 +43,10 @@ public class LoginActivity extends BaseActivity implements OnDataResponseListner
 
     public void loginclick(View view) {
 
-        if (Helper.emailValidator(etemail.getText().toString().trim())) {
-            Toast.makeText(this, "Email is empty", Toast.LENGTH_SHORT).show();
+        if (!Helper.emailValidator(etemail.getText().toString().trim())) {
+            Toast.makeText(this, getString(R.string.entervalid_email), Toast.LENGTH_SHORT).show();
         } else if(etpassword.getText().toString().isEmpty()) {
-            Toast.makeText(this, "Password is empty", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.entervalid_password), Toast.LENGTH_SHORT).show();
         }  else  {
             if (Helper.isNetworkConnected(this)) {
 
@@ -56,6 +56,7 @@ public class LoginActivity extends BaseActivity implements OnDataResponseListner
                 params.put(HttpParams.password,etpassword.getText().toString());
                 commanAPI.postRequest(HttpParams.login, params);
                 Helper.showProgressBar(this, getResources().getString(R.string.please_wait));
+                hideKeyboard(this);
             } else {
                 Toast.makeText(this, getString(R.string.No_Internet), Toast.LENGTH_SHORT).show();
             }

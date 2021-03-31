@@ -30,4 +30,11 @@ public class Arbeit4ThankyouActivity extends BaseActivity {
                 break;
         }
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        startActivity(new Intent(this, HomeActivity.class));
+        finish();
+    }
 }

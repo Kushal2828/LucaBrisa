@@ -51,6 +51,30 @@
     <string name="please_wait">Please Wait</string>
     <string name="No_Internet">No Internet Connection</string>
     <string name="somethingwrong">Something Went Wrong</string>
+    <string name="fuleinfoadded">Fuel Information Added Successfully</string>
+    <string name="plsenterendkilo">Please Enter End Kilometer</string>
+    <string name="dayended">Day Ended Successfully</string>
+    <string name="plsenterfulelevel">Please Enter Valid Fule level</string>
+    <string name="plsentermessage">Please Enter Valid Message</string>
+    <string name="messagesend">Mesage Send Successfully</string>
+    <string name="do_you_really_want_to_signout">Do you Really want to Logout?</string>
+    <string name="cancel">Cancel</string>
+    <string name="sure">Sure</string>
+    <string name="surewanttotime">Do you Really want to Stop timer?</string>
+    <string name="select_station">Select Station</string>
+    <string name="enter_start_kilometer">Enter Start Kilometer</string>
+    <string name="enter_start_kennzeichen">Enter Start Kennzeichen</string>
+    <string name="Alert">Alert</string>
+    <string name="timestoped">Timer Stopped Successfully</string>
+    <string name="pressbackagain_exit">Press Back Again To Exit</string>
+    <string name="entervalid_email">Enter Valid Email</string>
+    <string name="entervalid_password">Enter Valid Password</string>
+    <string name="entervalid_euro">Enter Valid Euro</string>
+    <string name="entervalid_disel">Enter Valid Disel</string>
+    <string name="entervalid_zipcode">Enter valid Zipcode</string>
+    <string name="entervalid_kilometer">Enter Valid Kilometer</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
     <string-array name="array_countries">
         <item>Australia</item>
         <item>Canada</item>

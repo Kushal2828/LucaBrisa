@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#E20074</color>
+        <color name="purple_200">#E20074</color>
     <color name="purple_500">#E20074</color>
     <!--statusbar color-->
     <color name="purple_700">#AF0E64</color>
+
+
     <color name="teal_200">#E20074</color>
     <color name="teal_700">#E20074</color>
     <color name="black">#FF000000</color>

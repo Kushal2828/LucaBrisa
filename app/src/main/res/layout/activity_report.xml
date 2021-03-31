@@ -64,7 +64,7 @@
 
 
                     <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
-                        android:id="@+id/etstartkilo"
+                        android:id="@+id/etmessage"
                         style="@style/txt_black_small"
                         android:layout_width="match_parent"
                         android:layout_height="156dp"
@@ -106,6 +106,7 @@
                         android:paddingRight="@dimen/_15sdp"
                         android:paddingBottom="@dimen/_10sdp"
                         android:text="@string/submit"
+                        android:onClick="reportclick"
                         android:textColor="@color/white" />
                 </FrameLayout>
             </LinearLayout>

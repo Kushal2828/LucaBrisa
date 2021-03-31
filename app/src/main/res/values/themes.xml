@@ -97,7 +97,9 @@
 
     </style>
 
-
+    <style name="CustomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/bounce_anim</item>
+    </style>
 
 
 

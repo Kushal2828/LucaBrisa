@@ -55,13 +55,14 @@
                 </ImageView>
                     <EditText
                         android:id="@+id/email"
-                        style="@style/txt_white_medium"
+                        style="@style/txt_black_medium"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_35sdp"
                         android:background="@null"
                         android:hint="@string/email"
                         android:padding="@dimen/_5sdp"
                         android:lines="1"
+                        android:text="kushal123@yopmail.com"
                         android:inputType="text"
                         android:paddingLeft="@dimen/_15sdp"
                         android:paddingTop="@dimen/_10sdp"
@@ -85,6 +86,7 @@
                         android:padding="@dimen/_3sdp">
 
                     </ImageView>
+
                     <EditText
                         android:id="@+id/password"
                         style="@style/txt_black_medium"
@@ -94,6 +96,7 @@
                         android:hint="@string/password"
                         android:padding="@dimen/_5sdp"
                         android:lines="1"
+                        android:text="monto@123"
                         android:inputType="text"
                         android:paddingLeft="@dimen/_15sdp"
                         android:paddingTop="@dimen/_10sdp"

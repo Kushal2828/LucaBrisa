@@ -127,6 +127,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:paddingVertical="@dimen/_5sdp"
+                    android:paddingHorizontal="@dimen/_7sdp"
                     android:maxLines="1"
                     android:text="@string/promelden" />
             </LinearLayout>

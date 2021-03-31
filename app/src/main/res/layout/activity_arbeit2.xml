@@ -1,59 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.Arbeit2Activity"
-    android:orientation="vertical">
-    <include layout="@layout/toolbar"/>
+    android:orientation="vertical"
+    tools:context=".Activity.Arbeit2Activity">
+
+    <include layout="@layout/toolbar" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_15sdp"
+            android:orientation="vertical">
+
+            <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+                style="@style/txt_black_large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/arbiet2"
+                android:textColor="@color/purple_200"
+                android:textStyle="bold" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/_15sdp"
+                android:layout_height="0dp"
+                android:layout_weight="9"
+                android:gravity="center"
                 android:orientation="vertical">
 
-                <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
-                    style="@style/txt_black_large"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/arbiet2"
-                    android:textColor="@color/purple_200"
-                    android:textStyle="bold" />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="8"
-                    android:gravity="center"
-                    android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:gravity="center"
+                        android:padding="@dimen/_10sdp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                                android:id="@+id/tvstartHour"
+                                style="@style/txt_black_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:paddingBottom="@dimen/_5sdp"
+                                android:text="00"
+                                android:textColor="@color/purple_200" />
+
+                            <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                                android:id="@+id/startcolonOne"
+                                style="@style/txt_black_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_3sdp"
+                                android:layout_marginRight="@dimen/_3sdp"
+                                android:text=":"
+                                android:textColor="@color/purple_200"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                                android:id="@+id/tvstartMinute"
+                                style="@style/txt_black_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:paddingBottom="@dimen/_5sdp"
+                                android:text="00"
+                                android:textColor="@color/purple_200" />
+
+                            <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                                android:id="@+id/startcolonTwo"
+                                style="@style/txt_black_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_3sdp"
+                                android:layout_marginRight="@dimen/_3sdp"
+                                android:text=":"
+                                android:textColor="@color/purple_200"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                                android:id="@+id/tvstartSecond"
+                                style="@style/txt_black_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:paddingBottom="@dimen/_5sdp"
+                                android:text="00"
+                                android:textColor="@color/purple_200" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    </LinearLayout>
+
                     <ImageView
                         android:id="@+id/ivTimer"
                         android:layout_width="@dimen/_50sdp"
                         android:layout_height="@dimen/_50sdp"
                         android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_timer"
-                        android:layout_margin="@dimen/_10sdp"/>
+                        android:layout_margin="@dimen/_10sdp"
+                        android:background="@drawable/ic_timer" />
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
                         android:gravity="center"
                         android:orientation="horizontal">
-
 
 
                         <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
@@ -66,8 +151,8 @@
                             android:paddingTop="@dimen/_5sdp"
                             android:paddingRight="@dimen/_7sdp"
                             android:paddingBottom="@dimen/_5sdp"
-                            android:textColor="@color/purple_200"
-                            android:text="15" />
+                            android:text="00"
+                            android:textColor="@color/purple_200" />
 
                         <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
                             android:id="@+id/colonOne"
@@ -87,8 +172,8 @@
                             android:paddingTop="@dimen/_5sdp"
                             android:paddingRight="@dimen/_7sdp"
                             android:paddingBottom="@dimen/_5sdp"
-                            android:textColor="@color/purple_200"
-                            android:text="15" />
+                            android:text="00"
+                            android:textColor="@color/purple_200" />
 
                         <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
                             android:id="@+id/colonTwo"
@@ -108,74 +193,73 @@
                             android:paddingTop="@dimen/_5sdp"
                             android:paddingRight="@dimen/_7sdp"
                             android:paddingBottom="@dimen/_5sdp"
-                            android:textColor="@color/purple_200"
-                            android:text="15" />
+                            android:text="00"
+                            android:textColor="@color/purple_200" />
                     </LinearLayout>
                 </LinearLayout>
 
-                  <!--  <cn.iwgang.countdownview.CountdownView
-                        android:id="@+id/timer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:isHideTimeBackground="true"
-                        app:isShowDay="true"
-                        app:isShowHour="true"
-                        app:isShowMillisecond="true"
-                        app:isShowMinute="true"
-                        app:isShowSecond="true"
-                        app:isTimeTextBold="true"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:suffixGravity="bottom"
-                        app:suffixHour=":"
-                        app:suffixMinute=":"
-                        app:suffixSecond=":"
-                        app:suffixTextColor="@color/textcolor"
-                        app:suffixTextSize="@dimen/_12sdp"
-                        app:timeTextColor="@color/purple_200"
-                        app:timeTextSize="@dimen/_27sdp" />-->
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
-                            android:id="@+id/tvfertig"
-                            style="@style/txt_black_medium"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="left"
-                            android:background="@drawable/colorbg"
-                            android:gravity="center"
-                            android:layout_margin="@dimen/_7sdp"
-                            android:paddingLeft="@dimen/_15sdp"
-                            android:paddingTop="@dimen/_10sdp"
-                            android:paddingRight="@dimen/_15sdp"
-                            android:paddingBottom="@dimen/_10sdp"
-                            android:text="@string/fertig"
-                            android:textColor="@color/white" />
-                    </FrameLayout>
-                </LinearLayout>
-
-
-
-
-
-                <!--  <RadioGroup
-                      android:layout_width="match_parent"
+                <!--  <cn.iwgang.countdownview.CountdownView
+                      android:id="@+id/timer"
+                      android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
-                      android:layout_marginTop="@dimen/_10sdp"
-                      android:orientation="vertical">-->
-
-
+                      app:isHideTimeBackground="true"
+                      app:isShowDay="true"
+                      app:isShowHour="true"
+                      app:isShowMillisecond="true"
+                      app:isShowMinute="true"
+                      app:isShowSecond="true"
+                      app:isTimeTextBold="true"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:suffixGravity="bottom"
+                      app:suffixHour=":"
+                      app:suffixMinute=":"
+                      app:suffixSecond=":"
+                      app:suffixTextColor="@color/textcolor"
+                      app:suffixTextSize="@dimen/_12sdp"
+                      app:timeTextColor="@color/purple_200"
+                      app:timeTextSize="@dimen/_27sdp" />-->
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        android:id="@+id/tvfertig"
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/colorbg"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/fertig"
+                        android:textColor="@color/white" />
+                </FrameLayout>
+            </LinearLayout>
+
+
+            <!--  <RadioGroup
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/_10sdp"
+                  android:orientation="vertical">-->
+
+
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".Activity.TankenActivity">
 
@@ -54,18 +55,95 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/kenizichen" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:background="@drawable/bg"
+                        android:orientation="vertical">
+                        <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
+                            android:id="@+id/etkenizichen"
+                            style="@style/txt_black_small"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:background="@null"
+                            android:hint="@string/kenizichen"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:paddingLeft="@dimen/_15sdp"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_15sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:singleLine="true"  />
+
+
+                        <LinearLayout
+                            android:id="@+id/llsuugest"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:background="@drawable/bottomcorner">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rv_filter"
+                                    android:elevation="@dimen/_5sdp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:overScrollMode="never"
+                                    android:scrollbars="none"
+                                    android:visibility="visible"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_max="@dimen/_250sdp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
                         android:text="@string/kilostand" />
 
 
                     <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
-                        android:id="@+id/etstartkilo"
+                        android:id="@+id/etkilometer"
                         style="@style/txt_black_small"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_35sdp"
                         android:background="@drawable/bg"
                         android:hint="@string/kilometer"
                         android:paddingHorizontal="@dimen/_10sdp"
-                        android:layout_margin="@dimen/_7sdp"
+                        android:layout_marginVertical="@dimen/_7sdp"
                         android:lines="1"
                         android:inputType="number"
                         android:paddingLeft="@dimen/_15sdp"
@@ -86,14 +164,14 @@
 
 
                     <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
-                        android:id="@+id/etzapfule"
+                        android:id="@+id/etzapcode"
                         style="@style/txt_black_small"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_35sdp"
                         android:background="@drawable/bg"
                         android:hint="@string/zapfulehint"
                         android:paddingHorizontal="@dimen/_10sdp"
-                        android:layout_margin="@dimen/_7sdp"
+                        android:layout_marginVertical="@dimen/_7sdp"
                         android:lines="1"
                         android:inputType="text"
                         android:paddingLeft="@dimen/_15sdp"
@@ -112,16 +190,16 @@
 
 
                     <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
-                        android:id="@+id/etkenizichen"
+                        android:id="@+id/etdiesel"
                         style="@style/txt_black_small"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_35sdp"
                         android:background="@drawable/bg"
                         android:hint="@string/disleliterhint"
                         android:paddingHorizontal="@dimen/_10sdp"
-                        android:layout_margin="@dimen/_7sdp"
+                        android:layout_marginVertical="@dimen/_7sdp"
                         android:lines="1"
-                        android:inputType="text"
+                        android:inputType="number"
                         android:paddingLeft="@dimen/_15sdp"
                         android:paddingTop="@dimen/_10sdp"
                         android:paddingRight="@dimen/_15sdp"
@@ -139,16 +217,16 @@
 
 
                     <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
-                        android:id="@+id/etkenizichen"
+                        android:id="@+id/eteuro"
                         style="@style/txt_black_small"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_35sdp"
                         android:background="@drawable/bg"
                         android:hint="@string/eurohint"
                         android:paddingHorizontal="@dimen/_10sdp"
-                        android:layout_margin="@dimen/_7sdp"
+                        android:layout_marginVertical="@dimen/_7sdp"
                         android:lines="1"
-                        android:inputType="text"
+                        android:inputType="number"
                         android:paddingLeft="@dimen/_15sdp"
                         android:paddingTop="@dimen/_10sdp"
                         android:paddingRight="@dimen/_15sdp"
@@ -185,6 +263,7 @@
                             android:padding="@dimen/_5sdp">
 
                             <Switch
+                                android:id="@+id/bluefulent"
                                 style="@style/Theme.LucaBrisa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -207,6 +286,7 @@
                             android:padding="@dimen/_5sdp">
 
                             <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+
                                 style="@style/txt_black_medium"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -219,6 +299,7 @@
                             android:padding="@dimen/_5sdp">
 
                             <Switch
+                                android:id="@+id/oilgentek"
                                 style="@style/Theme.LucaBrisa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -240,13 +321,14 @@
                     android:orientation="horizontal">
 
                     <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
-                        android:id="@+id/tvplayerupdate"
+                        android:id="@+id/tvaddfule"
                         style="@style/txt_black_medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:background="@drawable/colorbg"
                         android:gravity="center"
+                        android:onClick="addfuleclick"
                         android:layout_margin="@dimen/_7sdp"
                         android:paddingLeft="@dimen/_15sdp"
                         android:paddingTop="@dimen/_10sdp"

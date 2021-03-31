@@ -214,11 +214,11 @@ public class Arbeit1Activity extends BaseActivity implements OnDataResponseListn
 
 
                 if (locationid.equals("Select Station")) {
-                    showShortToast(this, "Select Station");
+                    showShortToast(this, getString(R.string.select_station));
                 } else if (etstartkilo.getText().toString().isEmpty()) {
-                    showShortToast(this, "Enter Start Kilometer");
+                    showShortToast(this, getString(R.string.enter_start_kilometer));
                 } else if (etkenizichen.getText().toString().isEmpty()) {
-                    showShortToast(this, "Enter Start Kennzeichen");
+                    showShortToast(this, getString(R.string.enter_start_kennzeichen));
                 } else {
                     if (Helper.isNetworkConnected(this)) {
 
@@ -232,6 +232,7 @@ public class Arbeit1Activity extends BaseActivity implements OnDataResponseListn
                         Log.e(TAG, "onViewClicked: "+params.toString() );
                         commanAPI.postRequest(HttpParams.startday, params);
                         Helper.showProgressBar(this, getResources().getString(R.string.please_wait));
+                        hideKeyboard(this);
                     } else {
                         Toast.makeText(this, getString(R.string.No_Internet), Toast.LENGTH_SHORT).show();
                     }
@@ -268,15 +269,15 @@ public class Arbeit1Activity extends BaseActivity implements OnDataResponseListn
 
                         list.addAll(stationmodel.data);
                         Set_SpinnerData(list);
-                        getcarlist();
+
 
                     } else {
                         showLongToast(this, stationmodel.message);
                     }
-
                     Log.e("TAG", "Response: " + new Gson().toJson(stationmodel));
 
                 }
+                getcarlist();
             } else if (methodName == HttpParams.GETCARLIST) {
                 if (response != null) {
                     Carlistmodel carlistmodel = new Gson().fromJson(response, new TypeToken<Carlistmodel>() {
@@ -303,6 +304,9 @@ public class Arbeit1Activity extends BaseActivity implements OnDataResponseListn
                         mAppPreference.setDayid(String.valueOf(startdaymodel.data.dayId));
                         Log.e(TAG, "Response:dayid "+mAppPreference.getDayid() );
 
+                        showShortToast(this,"Day Started Successfully");
+                        startActivity(new Intent(this, Arbeit2Activity.class));
+                        finish();
                     } else {
                         showLongToast(this, startdaymodel.message);
                     }
@@ -349,5 +353,13 @@ public class Arbeit1Activity extends BaseActivity implements OnDataResponseListn
         }*/
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        startActivity(new Intent(this, HomeActivity.class));
+        finish();
     }
 }

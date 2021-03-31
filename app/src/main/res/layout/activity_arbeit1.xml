@@ -181,7 +181,7 @@
                         android:background="@drawable/bg"
                         android:max="100"
                         android:thumb="@drawable/thumb"
-                        android:entries="@array/array_countries" />
+                        />
 
                     <LinearLayout
                         android:layout_width="match_parent"

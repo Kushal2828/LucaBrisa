@@ -91,19 +91,17 @@
                         style="@style/txt_black_small"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
                         android:background="@drawable/bg"
-                        android:minHeight="@dimen/_100sdp"
-                        android:maxHeight="@dimen/_200sdp"
-                        android:gravity="start"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:hint="@string/hintwritepro"
-                        android:lines="5"
-                        android:ems="1"
-                        android:maxLines="10"
-                        android:padding="@dimen/_8sdp"
-                        android:textAlignment="viewStart"
+                        android:gravity="top"
                         android:textColor="@color/black"
-                        android:textDirection="locale" />
+                        android:inputType="textMultiLine"
+                        android:minLines="6"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:singleLine="true"  />
 
 
 

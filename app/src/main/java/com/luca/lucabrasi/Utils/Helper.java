@@ -142,7 +142,6 @@ public class Helper {
                             progressBar.setVisibility(View.GONE);
                             return false;
                         }
-
                         @Override
                         public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
                             progressBar.setVisibility(View.GONE);
@@ -161,7 +160,6 @@ public class Helper {
                             progressBar.setVisibility(View.GONE);
                             return false;
                         }
-
                         @Override
                         public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
                             progressBar.setVisibility(View.GONE);

@@ -26,7 +26,6 @@ public class RetrofitClient {
                     .addConverterFactory(GsonConverterFactory.create());
     private static Retrofit retrofit;
 
-
     public static Retrofit getClient() {
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();

@@ -44,8 +44,6 @@ public class AppPreference {
         this.mEditors = sharedPreferences2.edit();
     }
 
-
-
     public String getMemberID() {
         return this.mSharedPreferences.getString(this.MemberID, "");
     }

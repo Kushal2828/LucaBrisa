@@ -29,7 +29,6 @@ public class BounceView implements BounceViewAnim {
     public static final int POP_OUT_ANIM_DURATION = 100;
     public static final AccelerateDecelerateInterpolator DEFAULT_INTERPOLATOR
             = new AccelerateDecelerateInterpolator();
-
     private WeakReference<View> view;
     private WeakReference<Dialog> dialog;
     private WeakReference<PopupWindow> popup;

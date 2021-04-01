@@ -44,7 +44,6 @@ public class TankenActivity extends BaseActivity implements OnDataResponseListne
     @BindView(R.id.etzapcode)
     EditText etzapcode;
 
-
     @BindView(R.id.etdiesel)
     EditText etdiesel;
 
@@ -66,14 +65,13 @@ public class TankenActivity extends BaseActivity implements OnDataResponseListne
     @BindView(R.id.etkenizichen)
     EditText etkenizichen;
 
-
-
     int isbluefulent,isoilgetank;
-    private String TAG="TankenActivity";
-    FilterAdapter filterAdapter;
-    List<Carlistmodel.Datum> carlist = new ArrayList<>();
     int Carid;
     String Carname;
+    FilterAdapter filterAdapter;
+    private String TAG="TankenActivity";
+    List<Carlistmodel.Datum> carlist = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

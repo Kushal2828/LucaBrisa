@@ -60,8 +60,6 @@ public class AppPreference {
         this.mEditor.putString(this.MemberID, memberID).commit();
     }
 
-
-
     public String getMemberData() {
         return this.mSharedPreferences.getString(this.MemberData, "");
     }

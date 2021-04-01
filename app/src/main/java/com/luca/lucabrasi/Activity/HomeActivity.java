@@ -37,7 +37,6 @@ public class HomeActivity extends BaseActivity implements OnDataResponseListner 
     }
 
     private void getstatus() {
-
         if (Helper.isNetworkConnected(this)) {
             CommanAPI commanAPI = new CommanAPI(HttpParams.GETDAYSTATUS, this);
             Map<String, String> params = new HashMap<>();
@@ -113,13 +112,9 @@ public class HomeActivity extends BaseActivity implements OnDataResponseListner 
 
                     mAppPreference.setCarid(getstatusmodel.data.carId);
                     mAppPreference.setStepstatus(getstatusmodel.data.dayStepStatus);
-                    Log.e("TAG", "Response: "+mAppPreference.getStepstatus() );
-                    Log.e("TAG", "Response:carid "+mAppPreference.getCaridID() );
-
+                    Log.e("TAG", "Response: "+mAppPreference.getStepstatus());
+                    Log.e("TAG", "Response:carid "+mAppPreference.getCaridID());
                 }
-
-
-
             }
 
         }

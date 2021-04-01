@@ -118,7 +118,7 @@ public class BaseActivity extends AppCompatActivity {
             BounceView.addAnimTo(alert);        //Call before showing the dialog
 
             Button nbutton = alert.getButton(DialogInterface.BUTTON_NEGATIVE);
-            nbutton.setTextColor(getResources().getColor(R.color.purple_200));
+           nbutton.setTextColor(getResources().getColor(R.color.textcolor));
             Button pbutton = alert.getButton(DialogInterface.BUTTON_POSITIVE);
             pbutton.setTextColor(getResources().getColor(R.color.purple_200));
         }

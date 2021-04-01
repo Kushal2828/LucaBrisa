@@ -46,12 +46,6 @@ public class AppPreference {
 
 
 
-
-
-
-
-
-
     public String getMemberID() {
         return this.mSharedPreferences.getString(this.MemberID, "");
     }

@@ -63,24 +63,56 @@
                         android:text="@string/writepro" />
 
 
+                       <!-- <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
+                            android:id="@+id/etmessage"
+                            style="@style/txt_black_small"
+                            android:layout_width="match_parent"
+                            android:layout_height="156dp"
+                            android:layout_margin="@dimen/_7sdp"
+                            android:background="@drawable/bg"
+                            android:hint="@string/writepro"
+                            android:gravity="start|top"
+                            android:inputType="textMultiLine"
+                            android:lines="5"
+                            android:minLines="1"
+                            android:nestedScrollingEnabled="true"
+                            android:isScrollContainer="true"
+                            android:scrollbars="vertical"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:paddingLeft="@dimen/_15sdp"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_15sdp"
+                            android:paddingBottom="@dimen/_10sdp"/>-->
+
+
+
                     <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
                         android:id="@+id/etmessage"
                         style="@style/txt_black_small"
                         android:layout_width="match_parent"
-                        android:layout_height="156dp"
-                        android:layout_margin="@dimen/_7sdp"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/bg"
-                        android:hint="@string/writepro"
-                        android:gravity="start|top"
-                        android:inputType="textImeMultiLine"
+                        android:minHeight="@dimen/_100sdp"
+                        android:maxHeight="@dimen/_200sdp"
+                        android:gravity="start"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:hint="@string/hintwritepro"
                         android:lines="5"
-                        android:maxLines="5"
-                        android:minLines="5"
-                        android:paddingHorizontal="@dimen/_10sdp"
-                        android:paddingLeft="@dimen/_15sdp"
-                        android:paddingTop="@dimen/_10sdp"
-                        android:paddingRight="@dimen/_15sdp"
-                        android:paddingBottom="@dimen/_10sdp" />
+                        android:ems="1"
+                        android:maxLines="10"
+                        android:padding="@dimen/_8sdp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textDirection="locale" />
+
+
+
+
+
+
+
+
+
 
 
                 </LinearLayout>
@@ -100,7 +132,7 @@
                         android:layout_gravity="left"
                         android:background="@drawable/colorbg"
                         android:gravity="center"
-                        android:layout_margin="@dimen/_7sdp"
+                        android:layout_marginVertical="@dimen/_7sdp"
                         android:paddingLeft="@dimen/_15sdp"
                         android:paddingTop="@dimen/_10sdp"
                         android:paddingRight="@dimen/_15sdp"

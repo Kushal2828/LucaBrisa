@@ -219,7 +219,7 @@ public class Arbeit1Activity extends BaseActivity implements OnDataResponseListn
                     showShortToast(this, getString(R.string.enter_start_kilometer));
                 } else if (etkenizichen.getText().toString().isEmpty()) {
                     showShortToast(this, getString(R.string.enter_start_kennzeichen));
-                }else if(!(ettrankstand.getProgress() >= 0)){
+                }else if(ettrankstand.getProgress() <= 0){
                     showShortToast(this, getString(R.string.plsenterfulelevel));
                 } else {
                     if (Helper.isNetworkConnected(this)) {
@@ -333,35 +333,14 @@ public class Arbeit1Activity extends BaseActivity implements OnDataResponseListn
         llsuugest.setVisibility(View.GONE);
     }
 
-    public void Startdayclick(View view) {
-
-        /*if (etemail.getText().toString().trim()) {
-            Toast.makeText(this, "Email is empty", Toast.LENGTH_SHORT).show();
-        } else if(etpassword.getText().toString().isEmpty()) {
-            Toast.makeText(this, "Password is empty", Toast.LENGTH_SHORT).show();
-        }  else  {
-            if (Helper.isNetworkConnected(this)) {
-
-                CommanAPI commanAPI = new CommanAPI(HttpParams.LOGIN, this);
-                Map<String, String> params = new HashMap<>();
-                params.put(HttpParams.username,etemail.getText().toString().trim());
-                params.put(HttpParams.password,etpassword.getText().toString());
-                commanAPI.postRequest(HttpParams.login, params);
-                Helper.showProgressBar(this, getResources().getString(R.string.please_wait));
-            } else {
-                Toast.makeText(this, getString(R.string.No_Internet), Toast.LENGTH_SHORT).show();
-            }
-
-        }*/
-
-
-    }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
 
-        startActivity(new Intent(this, HomeActivity.class));
+        Intent intent = new Intent(this, HomeActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
         finish();
     }
 }

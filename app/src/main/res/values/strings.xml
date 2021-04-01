@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">LucaBrisa</string>
+    <string name="app_name">Luca Brisa</string>
 
-    <string name="footer">\© LucaBrasi 2021|All rights reserved</string>
+    <string name="footer">\© Luca Brasi 2021|All rights reserved</string>
     <string name="login">Anmeldung</string>
     <string name="email">Email</string>
     <string name="password">Passwort</string>

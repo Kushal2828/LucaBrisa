@@ -1,9 +1,12 @@
 package com.luca.lucabrasi.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Scroller;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -37,6 +40,9 @@ public class ReportActivity extends BaseActivity implements OnDataResponseListne
         ButterKnife.bind(this);
         setTitle(getString(R.string.promeldenheader), View.VISIBLE);
 
+        etmessage.setScroller(new Scroller(this));
+        etmessage.setVerticalScrollBarEnabled(true);
+        etmessage.setMovementMethod(new ScrollingMovementMethod());
     }
 
     public void reportclick(View view) {
@@ -45,7 +51,6 @@ public class ReportActivity extends BaseActivity implements OnDataResponseListne
             showShortToast(this, getString(R.string.plsentermessage));
         } else {
             if (Helper.isNetworkConnected(this)) {
-
                 CommanAPI commanAPI = new CommanAPI(HttpParams.SENDMESSAGE, this);
                 Map<String, String> params = new HashMap<>();
                 params.put(HttpParams.driver_id, mAppPreference.getMemberID());
@@ -58,20 +63,15 @@ public class ReportActivity extends BaseActivity implements OnDataResponseListne
                 Toast.makeText(this, getString(R.string.No_Internet), Toast.LENGTH_SHORT).show();
             }
         }
-
-
     }
 
     @Override
     public void Response(String methodName, String response, boolean isResponse) {
         Helper.hideProgressBar();
         if (isResponse) {
-
-
             if (methodName == HttpParams.SENDMESSAGE) {
                 if (response != null) {
-                    Commonmodel commonmodel = new Gson().fromJson(response, new TypeToken<Commonmodel>() {
-                    }.getType());
+                    Commonmodel commonmodel = new Gson().fromJson(response, new TypeToken<Commonmodel>() {}.getType());
                     if (commonmodel.status.equals(HttpParams.success)) {
                         showLongToast(this, getString(R.string.messagesend));
                     } else {
@@ -80,9 +80,18 @@ public class ReportActivity extends BaseActivity implements OnDataResponseListne
                 }
                 Log.e("TAG", "Response: " + response);
             }
-
         }else {
             showLongToast(this, getString(R.string.somethingwrong));
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intent = new Intent(this, HomeActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
     }
 }

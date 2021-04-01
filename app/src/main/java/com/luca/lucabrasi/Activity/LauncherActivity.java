@@ -20,7 +20,6 @@ public class LauncherActivity extends BaseActivity {
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
-
                 if (mAppPreference.getMemberID() != null && !mAppPreference.getMemberID().equals("")) {
                     startActivity(new Intent(LauncherActivity.this, HomeActivity.class));
                     finish();
@@ -35,6 +34,7 @@ public class LauncherActivity extends BaseActivity {
                /* Intent intent = new Intent(LauncherActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();*/
+
             }
         }, 2500);
     }

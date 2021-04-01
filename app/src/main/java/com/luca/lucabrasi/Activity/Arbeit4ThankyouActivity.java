@@ -34,7 +34,9 @@ public class Arbeit4ThankyouActivity extends BaseActivity {
     public void onBackPressed() {
         super.onBackPressed();
 
-        startActivity(new Intent(this, HomeActivity.class));
+        Intent intent = new Intent(this, HomeActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
         finish();
     }
 }

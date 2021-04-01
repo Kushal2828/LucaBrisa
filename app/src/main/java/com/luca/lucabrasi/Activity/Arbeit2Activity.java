@@ -70,9 +70,7 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arbeit2);
         ButterKnife.bind(this);
-
         setTitle(getString(R.string.home), View.GONE);
-
         getcurrentTimestamp();
 
     }
@@ -101,8 +99,6 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
             case R.id.tvfertig:
 
                 setDialog(this, getString(R.string.surewanttotime));
-
-
                 // startActivity(new Intent(this, Arbeit3Activity.class));
                 break;
         }
@@ -120,10 +116,7 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
         });
         builder.setPositiveButton(getResources().getString(R.string.yes), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-
                 callapi();
-
-
             }
         });
 
@@ -193,8 +186,9 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-
-        startActivity(new Intent(this, HomeActivity.class));
+        Intent intent = new Intent(this, HomeActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
         finish();
     }
 
@@ -215,7 +209,7 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
 
                         setstartTime(gettimestampmodel);
 
-                        String pattern = "yyyy-MM-DD HH:mm:ss";
+                        String pattern = "yyyy-MM-DD HH:mm:SS";
                         DateFormat formatter = new SimpleDateFormat(pattern);
                         Date date = null;
                         try {
@@ -227,9 +221,21 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
 
                         Calendar calendar = Calendar.getInstance();
                         calendar.setTime(date);
+                        Log.e(TAG, "Response: hours"+calendar.get(Calendar.HOUR_OF_DAY)+" "+calendar.get(Calendar.MINUTE) );
                         int hours = calendar.get(Calendar.HOUR_OF_DAY);
                         int minutes = calendar.get(Calendar.MINUTE);
                         int seconds = calendar.get(Calendar.SECOND);
+
+
+                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-DD HH:mm:SS");
+                        sdf.format(date);
+
+
+
+
+
+
+
 
                         tvHour.setText(String.valueOf(hours));
                         tvMinute.setText(String.valueOf(minutes));

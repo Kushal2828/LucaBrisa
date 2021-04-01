@@ -17,8 +17,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    public static final String BASE_URL     = "https://test-bh.potenzaglobalsolutions.com/sports_success/api/";
-    public static final String PurchaseCode = "s4qwfcsr-0a50-3s4d-2g87-35105f543045";
 
     private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
 

@@ -262,23 +262,12 @@ public class TankenActivity extends BaseActivity implements OnDataResponseListne
                                     Carname = carlist.get(i).carNoplate;
                                     etkenizichen.setText(Carname);
                                     llsuugest.setVisibility(View.GONE);
-
                                 }
                             }
                         }else {
                             Log.e(TAG, "carlist is empty" );
                         }
-
                     }
-
-
-
-
-
-
-
-
-
                     Log.e(TAG, "Response:carlist " + new Gson().toJson(carlist));
                 } else {
                     showLongToast(this, carlistmodel.message);
@@ -288,9 +277,6 @@ public class TankenActivity extends BaseActivity implements OnDataResponseListne
 
             }
         }
-
-
-
     }
 
     @Override
@@ -304,7 +290,9 @@ public class TankenActivity extends BaseActivity implements OnDataResponseListne
     public void onBackPressed() {
         super.onBackPressed();
 
-        startActivity(new Intent(this, HomeActivity.class));
+        Intent intent = new Intent(this, HomeActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
         finish();
     }
 }

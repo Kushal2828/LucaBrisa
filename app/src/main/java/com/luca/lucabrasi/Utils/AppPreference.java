@@ -62,7 +62,6 @@ public class AppPreference {
 
 
 
-
     public String getMemberData() {
         return this.mSharedPreferences.getString(this.MemberData, "");
     }

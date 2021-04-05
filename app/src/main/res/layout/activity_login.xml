@@ -118,7 +118,9 @@
                         android:background="@drawable/colorbg"
                         android:gravity="center"
                         android:text="@string/login"
-                        android:onClick="loginclick"/>
+                        android:onClick="loginclick"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"/>
                 </LinearLayout>
 
             </LinearLayout>

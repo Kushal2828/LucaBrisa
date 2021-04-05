@@ -1,5 +1,9 @@
 package com.luca.lucabrasi.Activity;
 
+/**
+ * Created by hari on 1-4-2021.
+ */
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -119,16 +123,7 @@ public class Arbeit1Activity extends BaseActivity implements OnDataResponseListn
         spStationlist.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-/*
-                    if(position == 0)
-                    {
-                        selected = false;
-                    }else {
-                        for (int i = 0; i <list.size() ; i++) {
-                            if(list.get(i).name == )
-                        }
-                        selected = true;
-                    }*/
+
                 if (position != 0) {
                     Log.e(TAG, "onItemSelected: " + list.get(position - 1).name);
                     selected = true;
@@ -271,8 +266,6 @@ public class Arbeit1Activity extends BaseActivity implements OnDataResponseListn
 
                         list.addAll(stationmodel.data);
                         Set_SpinnerData(list);
-
-
                     } else {
                         showLongToast(this, stationmodel.message);
                     }

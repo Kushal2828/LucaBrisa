@@ -32,8 +32,9 @@ public class HomeActivity extends BaseActivity implements OnDataResponseListner 
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
         setTitle(getString(R.string.home),View.GONE);
-        Log.e("TAG", "onCreate:driverid"+mAppPreference.getMemberID() );
+        Log.e("TAG", "onCreate:driverid"+mAppPreference.getMemberID());
         getstatus();
+
     }
 
     private void getstatus() {
@@ -46,8 +47,6 @@ public class HomeActivity extends BaseActivity implements OnDataResponseListner 
         } else {
             Toast.makeText(this, getString(R.string.No_Internet), Toast.LENGTH_SHORT).show();
         }
-
-
     }
 
     @OnClick({R.id.arbeit,R.id.tanken,R.id.profile,R.id.logout})
@@ -57,20 +56,14 @@ public class HomeActivity extends BaseActivity implements OnDataResponseListner 
             case R.id.arbeit:
                 if (mAppPreference.getStepstatus().equals("1")){
                     startActivity(new Intent(this, Arbeit2Activity.class));
-
                 }else if(mAppPreference.getStepstatus().equals("2")){
                     startActivity(new Intent(this, Arbeit3Activity.class));
-
                 }else if(mAppPreference.getStepstatus().equals("3")){
                     startActivity(new Intent(this, Arbeit4ThankyouActivity.class));
-
                 }else if(mAppPreference.getStepstatus().equals("0")){
                     startActivity(new Intent(this, Arbeit1Activity.class));
-
                 }
-
-    
-                // startActivity(new Intent(this, Arbeit1Activity.class));
+                //startActivity(new Intent(this, Arbeit1Activity.class));
                 break;
             case R.id.tanken:
                 startActivity(new Intent(this, TankenActivity.class));
@@ -79,9 +72,7 @@ public class HomeActivity extends BaseActivity implements OnDataResponseListner 
                 startActivity(new Intent(this, ReportActivity.class));
                 break;
             case R.id.logout:
-               // mAppPreference.ClearSharedpreference();
                 setLogoutDialog(this,getString(R.string.logout),getString(R.string.do_you_really_want_to_signout));
-                //startActivity(new Intent(this, LoginActivity.class));
                 break;
         }
     }
@@ -104,23 +95,18 @@ public class HomeActivity extends BaseActivity implements OnDataResponseListner 
         Helper.hideProgressBar();
         if(isResponse){
             if(response != null){
-                Getstatusmodel getstatusmodel =  new Gson().fromJson(response, new TypeToken<Getstatusmodel>() {
-                }.getType());
+                Getstatusmodel getstatusmodel =  new Gson().fromJson(response, new TypeToken<Getstatusmodel>() {}.getType());
                 if (getstatusmodel.status.equals("success")){
-
-                    Log.e("TAG", "Response: "+response );
-
+                    Log.e("TAG", "Response: "+response);
                     mAppPreference.setCarid(getstatusmodel.data.carId);
                     mAppPreference.setStepstatus(getstatusmodel.data.dayStepStatus);
                     Log.e("TAG", "Response: "+mAppPreference.getStepstatus());
                     Log.e("TAG", "Response:carid "+mAppPreference.getCaridID());
                 }
             }
-
         }
 
         Log.e("TAG", "Response: "+response );
-
 
     }
 }

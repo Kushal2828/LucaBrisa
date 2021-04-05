@@ -3,7 +3,7 @@ package com.luca.lucabrasi.CustomViews.bounceview;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
 /**
- * Created by hari on 7/6/18.
+ * Created by Kushal on 7/6/18.
  */
 
 public interface BounceViewAnim {

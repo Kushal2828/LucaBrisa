@@ -53,8 +53,6 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:orientation="vertical">
 
-
-
                     <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
                         style="@style/txt_black_medium"
                         android:layout_width="match_parent"
@@ -137,7 +135,9 @@
                         android:paddingBottom="@dimen/_10sdp"
                         android:text="@string/submit"
                         android:onClick="reportclick"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"/>
                 </FrameLayout>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>

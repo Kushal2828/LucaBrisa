@@ -89,11 +89,10 @@ public class Arbeit3Activity extends BaseActivity implements OnDataResponseListn
                     showShortToast(this, getString(R.string.plsenterfulelevel));
                 } else {
                     if (Helper.isNetworkConnected(this)) {
-
                         CommanAPI commanAPI = new CommanAPI(HttpParams.FINISHDAY, this);
                         Map<String, String> params = new HashMap<>();
                         params.put(HttpParams.driver_id, mAppPreference.getMemberID());
-                       // params.put(HttpParams.day_id, mAppPreference.getDayid());
+                        //params.put(HttpParams.day_id, mAppPreference.getDayid());
                         params.put(HttpParams.accident_status, String.valueOf(statusAccident));
                         params.put(HttpParams.end_kilometer, etendkilo.getText().toString());
                         params.put(HttpParams.end_fuel_level, String.valueOf(ettrankstand.getProgress()));

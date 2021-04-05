@@ -40,28 +40,42 @@ public class Gettimestampmodel {
     }
     public class Data {
 
-        @SerializedName("timestamp")
-        @Expose
-        public String timestamp;
-        @SerializedName("current_time")
-        @Expose
-        public String currentTime;
 
-        public String getTimestamp() {
-            return timestamp;
-        }
+            @SerializedName("timestamp")
+            @Expose
+            public String timestamp;
+            @SerializedName("current_time")
+            @Expose
+            public String currentTime;
+            @SerializedName("time_difference")
+            @Expose
+            public String timeDifference;
 
-        public void setTimestamp(String timestamp) {
-            this.timestamp = timestamp;
-        }
+            public String getTimestamp() {
+                return timestamp;
+            }
 
-        public String getCurrentTime() {
-            return currentTime;
-        }
+            public void setTimestamp(String timestamp) {
+                this.timestamp = timestamp;
+            }
 
-        public void setCurrentTime(String currentTime) {
-            this.currentTime = currentTime;
-        }
+            public String getCurrentTime() {
+                return currentTime;
+            }
+
+            public void setCurrentTime(String currentTime) {
+                this.currentTime = currentTime;
+            }
+
+            public String getTimeDifference() {
+                return timeDifference;
+            }
+
+            public void setTimeDifference(String timeDifference) {
+                this.timeDifference = timeDifference;
+            }
+
+
 
     }
 }

@@ -74,7 +74,9 @@
                     android:paddingRight="@dimen/_15sdp"
                     android:paddingBottom="@dimen/_10sdp"
                     android:text="@string/gohome"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"/>
             </FrameLayout>
         </LinearLayout>
 

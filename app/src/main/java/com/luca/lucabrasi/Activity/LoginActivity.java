@@ -23,6 +23,14 @@ import java.util.Map;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+
+
+
+
+/**
+ * Created by Kushal on 7/6/18.
+ */
+
 public class LoginActivity extends BaseActivity implements OnDataResponseListner {
 
     private String TAG="LoginActivity";
@@ -60,11 +68,7 @@ public class LoginActivity extends BaseActivity implements OnDataResponseListner
             } else {
                 Toast.makeText(this, getString(R.string.No_Internet), Toast.LENGTH_SHORT).show();
             }
-
         }
-
-
-
 
         // startActivity(new Intent(this, HomeActivity.class));
     }
@@ -78,19 +82,14 @@ public class LoginActivity extends BaseActivity implements OnDataResponseListner
                     Loginmodel loginmodel = new Gson().fromJson(response, new TypeToken<Loginmodel>() {
                     }.getType());
                     if (loginmodel.status.equals(HttpParams.success)) {
-
                         mAppPreference.setMemberID(loginmodel.data.driverId);
                         Log.e(TAG, "Response:MemberID "+ mAppPreference.getMemberID());
                         startActivity(new Intent(this, HomeActivity.class));
-
-
-
                     } else {
                         showLongToast(this, loginmodel.message);
                     }
 
                     Log.e("TAG", "Response: " + new Gson().toJson(loginmodel));
-
                 }
             }
 
@@ -99,10 +98,7 @@ public class LoginActivity extends BaseActivity implements OnDataResponseListner
             Log.e(TAG, "Response: "+response );
         }
 
-
         // Log.e("TAG", "Response: " + new Gson().toJson(loginmodel));
         // Log.e("TAG", "Response: " + new Gson().toJson(loginmodel.data));
-
-
     }
 }

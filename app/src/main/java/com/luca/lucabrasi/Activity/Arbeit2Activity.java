@@ -88,8 +88,6 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
         } else {
             showShortToast(this, getString(R.string.No_Internet));
         }
-
-
     }
 
     @OnClick({R.id.tvfertig})
@@ -97,7 +95,6 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
 
         switch (view.getId()) {
             case R.id.tvfertig:
-
                 setDialog(this, getString(R.string.surewanttotime));
                 // startActivity(new Intent(this, Arbeit3Activity.class));
                 break;
@@ -123,10 +120,10 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
         AlertDialog alert = builder.create();
         alert.show();
 
-        BounceView.addAnimTo(alert);        //Call before showing the dialog
-
+        BounceView.addAnimTo(alert);    //Call before showing the dialog
         Button nbutton = alert.getButton(DialogInterface.BUTTON_NEGATIVE);
         nbutton.setTextColor(getResources().getColor(R.color.purple_200));
+
         Button pbutton = alert.getButton(DialogInterface.BUTTON_POSITIVE);
         pbutton.setTextColor(getResources().getColor(R.color.purple_200));
     }
@@ -147,10 +144,101 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
         }
     }
 
+
+
+    @Override
+    public void Response(String methodName, String response, boolean isResponse) {
+        Helper.hideProgressBar();
+        Log.e(TAG, "Response:converted " + response);
+        if (isResponse) {
+            if (methodName.equals(HttpParams.GETDAYTIMESTAMP)) {
+                if (response != null) {
+                    Gettimestampmodel gettimestampmodel = new Gson().fromJson(response, new TypeToken<Gettimestampmodel>() {
+                    }.getType());
+                    if (gettimestampmodel.status.equals(HttpParams.success)) {
+
+                        mAppPreference.setStarttime(gettimestampmodel.data.timestamp);
+                        Log.e(TAG, "Response:MemberID " + mAppPreference.getStarttime());
+                        setstartTime(gettimestampmodel);
+
+                        setCurrentTimer(gettimestampmodel);
+
+                    } else {
+                        showLongToast(this, gettimestampmodel.message);
+                    }
+                    Log.e("TAG", "Response: " + new Gson().toJson(gettimestampmodel));
+                }
+            } else if (methodName.equals(HttpParams.STOPTIMER)) {
+                if (response != null) {
+                    Commonmodel commonmodel = new Gson().fromJson(response, new TypeToken<Commonmodel>() {
+                    }.getType());
+                    if (commonmodel.status.equals(HttpParams.success)) {
+                        showLongToast(this, getString(R.string.timestoped));
+                        startActivity(new Intent(this, Arbeit3Activity.class));
+                        finish();
+                    } else {
+                        showLongToast(this, commonmodel.message);
+                    }
+                }
+            }
+        } else {
+            showLongToast(this, getString(R.string.somethingwrong));
+            Log.e(TAG, "Response: ");
+        }
+    }
+
+    private void setCurrentTimer(Gettimestampmodel gettimestampmodel) {
+        String pattern = "HH:mm:ss";
+        DateFormat formatter = new SimpleDateFormat(pattern);
+        Date date = null;
+        try {
+            date = formatter.parse(gettimestampmodel.data.timeDifference);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        int hours = calendar.get(Calendar.HOUR_OF_DAY);
+        int minutes = calendar.get(Calendar.MINUTE);
+        int seconds = calendar.get(Calendar.SECOND);
+        Log.e(TAG, "Response: hours"+calendar.get(Calendar.HOUR_OF_DAY)+" "+calendar.get(Calendar.MINUTE) );
+
+        //set to view
+        tvHour.setText(String.valueOf(hours));
+        tvMinute.setText(String.valueOf(minutes));
+        tvSecond.setText(String.valueOf(seconds));
+        setTimer(tvHour, tvMinute, tvSecond);
+        Log.e(TAG, "Response:converted " + hours + " " + minutes + " " + seconds);
+    }
+
+    private void setstartTime(Gettimestampmodel timestamp) {
+
+        String pattern = "yyyy-MM-DD HH:mm:ss";
+        DateFormat formatter = new SimpleDateFormat(pattern);
+        Date date = null;
+        try {
+            date = formatter.parse(timestamp.data.timestamp);
+            Log.e(TAG, "Response:converted time " + date.getTime());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        Calendar calendar = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            calendar = Calendar.getInstance();
+            calendar.setTime(date);
+            int hours = calendar.get(Calendar.HOUR_OF_DAY);
+            int minutes = calendar.get(Calendar.MINUTE);
+            int seconds = calendar.get(Calendar.SECOND);
+            tvstartHour.setText(String.valueOf(hours));
+            tvstartMinute.setText(String.valueOf(minutes));
+            tvstartSecond.setText(String.valueOf(seconds));
+        }
+    }
+
     private void setTimer(final TextView tvHour, TextView tvminute, TextView tvSecond) {
         if (handler != null) {
             handler.removeCallbacks(null);
-
         } else {
             handler = new Handler();
         }
@@ -191,112 +279,12 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
         startActivity(intent);
         finish();
     }
-
-    @Override
-    public void Response(String methodName, String response, boolean isResponse) {
-        Helper.hideProgressBar();
-        Log.e(TAG, "Response: " + response);
-        if (isResponse) {
-            if (methodName.equals(HttpParams.GETDAYTIMESTAMP)) {
-                if (response != null) {
-                    Gettimestampmodel gettimestampmodel = new Gson().fromJson(response, new TypeToken<Gettimestampmodel>() {
-                    }.getType());
-                    if (gettimestampmodel.status.equals(HttpParams.success)) {
-
-                        mAppPreference.setStarttime(gettimestampmodel.data.timestamp);
-                        Log.e(TAG, "Response:MemberID " + mAppPreference.getStarttime());
-
-
-                        setstartTime(gettimestampmodel);
-
-                        String pattern = "yyyy-MM-DD HH:mm:SS";
-                        DateFormat formatter = new SimpleDateFormat(pattern);
-                        Date date = null;
-                        try {
-                            date = formatter.parse(gettimestampmodel.data.currentTime);
-                            Log.e(TAG, "Response:converted time " + date.getTime());
-                        } catch (ParseException e) {
-                            e.printStackTrace();
-                        }
-
-                        Calendar calendar = Calendar.getInstance();
-                        calendar.setTime(date);
-                        Log.e(TAG, "Response: hours"+calendar.get(Calendar.HOUR_OF_DAY)+" "+calendar.get(Calendar.MINUTE) );
-                        int hours = calendar.get(Calendar.HOUR_OF_DAY);
-                        int minutes = calendar.get(Calendar.MINUTE);
-                        int seconds = calendar.get(Calendar.SECOND);
-
-
-                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-DD HH:mm:SS");
-                        sdf.format(date);
-
-
-
-
-
-
-
-
-                        tvHour.setText(String.valueOf(hours));
-                        tvMinute.setText(String.valueOf(minutes));
-                        tvSecond.setText(String.valueOf(seconds));
-                        setTimer(tvHour, tvMinute, tvSecond);
-                        Log.e(TAG, "Response: " + hours + " " + minutes + " " + seconds);
-
-
-                    } else {
-                        showLongToast(this, gettimestampmodel.message);
-                    }
-
-                    Log.e("TAG", "Response: " + new Gson().toJson(gettimestampmodel));
-
-                }
-            } else if (methodName.equals(HttpParams.STOPTIMER)) {
-                if (response != null) {
-                    Commonmodel commonmodel = new Gson().fromJson(response, new TypeToken<Commonmodel>() {
-                    }.getType());
-                    if (commonmodel.status.equals(HttpParams.success)) {
-                        showLongToast(this, getString(R.string.timestoped));
-                        startActivity(new Intent(this, Arbeit3Activity.class));
-                        finish();
-                    } else {
-                        showLongToast(this, commonmodel.message);
-                    }
-                }
-
-            }
-        } else {
-            showLongToast(this, getString(R.string.somethingwrong));
-            Log.e(TAG, "Response: ");
-        }
-
-    }
-
-    private void setstartTime(Gettimestampmodel timestamp) {
-
-        String pattern = "yyyy-MM-DD HH:mm:ss";
-        DateFormat formatter = new SimpleDateFormat(pattern);
-        Date date = null;
-        try {
-            date = formatter.parse(timestamp.data.timestamp);
-            Log.e(TAG, "Response:converted time " + date.getTime());
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-        Calendar calendar = null;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            calendar = Calendar.getInstance();
-            calendar.setTime(date);
-            int hours = calendar.get(Calendar.HOUR_OF_DAY);
-            int minutes = calendar.get(Calendar.MINUTE);
-            int seconds = calendar.get(Calendar.SECOND);
-
-            tvstartHour.setText(String.valueOf(hours));
-            tvstartMinute.setText(String.valueOf(minutes));
-            tvstartSecond.setText(String.valueOf(seconds));
-
-        }
-
-    }
 }
+
+
+
+
+
+
+
+

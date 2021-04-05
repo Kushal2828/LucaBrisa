@@ -22,13 +22,10 @@ public class CommanAPI {
     String MethodName, responceData;
     public OnDataResponseListner onDataResponseListner;
 
-
-
     public CommanAPI(String methodName, OnDataResponseListner onDataResponseListner) {
         MethodName = methodName;
         this.onDataResponseListner = onDataResponseListner;
     }
-
     public void getResponse(String Url) {
 
         try {

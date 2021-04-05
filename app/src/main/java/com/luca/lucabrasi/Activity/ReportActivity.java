@@ -39,7 +39,6 @@ public class ReportActivity extends BaseActivity implements OnDataResponseListne
         setContentView(R.layout.activity_report);
         ButterKnife.bind(this);
         setTitle(getString(R.string.promeldenheader), View.VISIBLE);
-
         etmessage.setScroller(new Scroller(this));
         etmessage.setVerticalScrollBarEnabled(true);
         etmessage.setMovementMethod(new ScrollingMovementMethod());

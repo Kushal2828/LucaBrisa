@@ -236,7 +236,6 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:layout_margin="@dimen/_7sdp"
-                        android:onClick="Startdayclick"
                         android:background="@drawable/colorbg"
                         android:gravity="center"
                         android:paddingLeft="@dimen/_15sdp"

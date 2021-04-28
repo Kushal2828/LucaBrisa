@@ -2,11 +2,15 @@ package com.luca.lucabrasi.Activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,6 +38,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import javax.security.auth.login.LoginException;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -59,21 +65,30 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
     @BindView(R.id.tvstartSecond)
     TextView tvstartSecond;
 
+    @BindView(R.id.ivTimer)
+    ImageView ivTimer;
 
     private Handler handler;
     private String TAG = "Arbeit2Activity";
     LocalDateTime localDateTime = null;
-
-
+    AnimationDrawable timeranimation;
+    String pattern = "yyyy-MM-DD HH:mm:ss";
+    String patterntime = "HH:mm:ss";
+    Animation heartbeat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arbeit2);
         ButterKnife.bind(this);
         setTitle(getString(R.string.home), View.GONE);
+      //  ivTimer.setBackgroundResource(R.drawable.animation);
+      //  timeranimation = (AnimationDrawable) ivTimer.getBackground();
         getcurrentTimestamp();
+        heartbeat = AnimationUtils.loadAnimation(Arbeit2Activity.this,R.anim.heartbeat_amin);
+        ivTimer.startAnimation(heartbeat);
 
     }
+
 
     private void getcurrentTimestamp() {
         if (Helper.isNetworkConnected(this)) {
@@ -96,7 +111,6 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
         switch (view.getId()) {
             case R.id.tvfertig:
                 setDialog(this, getString(R.string.surewanttotime));
-                // startActivity(new Intent(this, Arbeit3Activity.class));
                 break;
         }
     }
@@ -144,8 +158,6 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
         }
     }
 
-
-
     @Override
     public void Response(String methodName, String response, boolean isResponse) {
         Helper.hideProgressBar();
@@ -160,7 +172,6 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
                         mAppPreference.setStarttime(gettimestampmodel.data.timestamp);
                         Log.e(TAG, "Response:MemberID " + mAppPreference.getStarttime());
                         setstartTime(gettimestampmodel);
-
                         setCurrentTimer(gettimestampmodel);
 
                     } else {
@@ -188,8 +199,8 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
     }
 
     private void setCurrentTimer(Gettimestampmodel gettimestampmodel) {
-        String pattern = "HH:mm:ss";
-        DateFormat formatter = new SimpleDateFormat(pattern);
+
+        DateFormat formatter = new SimpleDateFormat(patterntime);
         Date date = null;
         try {
             date = formatter.parse(gettimestampmodel.data.timeDifference);
@@ -213,13 +224,12 @@ public class Arbeit2Activity extends BaseActivity implements OnDataResponseListn
 
     private void setstartTime(Gettimestampmodel timestamp) {
 
-        String pattern = "yyyy-MM-DD HH:mm:ss";
         DateFormat formatter = new SimpleDateFormat(pattern);
         Date date = null;
-        try {
+        try  {
             date = formatter.parse(timestamp.data.timestamp);
             Log.e(TAG, "Response:converted time " + date.getTime());
-        } catch (ParseException e) {
+        } catch  (ParseException e) {
             e.printStackTrace();
         }
 

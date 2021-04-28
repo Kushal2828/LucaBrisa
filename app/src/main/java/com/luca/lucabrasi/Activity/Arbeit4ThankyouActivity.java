@@ -25,7 +25,9 @@ public class Arbeit4ThankyouActivity extends BaseActivity {
 
         switch (view.getId()) {
             case R.id.tvgotohome:
-                startActivity(new Intent(this, HomeActivity.class));
+                Intent intent = new Intent(this, HomeActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
                 finish();
                 break;
         }
@@ -33,7 +35,6 @@ public class Arbeit4ThankyouActivity extends BaseActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-
         Intent intent = new Intent(this, HomeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);

@@ -73,6 +73,7 @@ public class ReportActivity extends BaseActivity implements OnDataResponseListne
                     Commonmodel commonmodel = new Gson().fromJson(response, new TypeToken<Commonmodel>() {}.getType());
                     if (commonmodel.status.equals(HttpParams.success)) {
                         showLongToast(this, getString(R.string.messagesend));
+                        etmessage.getText().clear();
                     } else {
                         showLongToast(this, commonmodel.message);
                     }

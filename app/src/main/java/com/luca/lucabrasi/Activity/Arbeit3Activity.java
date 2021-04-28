@@ -32,7 +32,7 @@ import butterknife.OnClick;
 public class Arbeit3Activity extends BaseActivity implements OnDataResponseListner {
 
 
-    private static final String TAG = "Arbeit3Activity";
+
     @BindView(R.id.etendkilo)
     EditText etendkilo;
 
@@ -46,6 +46,7 @@ public class Arbeit3Activity extends BaseActivity implements OnDataResponseListn
     SeekBar ettrankstand;
 
     int statusAccident;
+    private static final String TAG = "Arbeit3Activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,7 +105,6 @@ public class Arbeit3Activity extends BaseActivity implements OnDataResponseListn
                         Toast.makeText(this, getString(R.string.No_Internet), Toast.LENGTH_SHORT).show();
                     }
                 }
-                //
                 break;
         }
     }

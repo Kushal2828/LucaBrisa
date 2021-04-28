@@ -54,11 +54,22 @@
                     android:orientation="vertical">
 
                     <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        style="@style/txt_black_small"
+                        android:textColor="@color/grey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="@string/die_nachricht_geht_direkt_an_den_chef_falls_ihr_ein_problem_mit_einem_mitarbeiter_dispatcher_oder_fuhrparkmanager_habt_schreibt_es_bitte_unten_rein" />
+
+
+
+
+                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
                         style="@style/txt_black_medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_15sdp"
-                        android:text="@string/writepro" />
+                        android:text="@string/problemmelden" />
 
 
                        <!-- <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
@@ -99,7 +110,8 @@
                         android:paddingTop="@dimen/_10sdp"
                         android:paddingRight="@dimen/_10sdp"
                         android:paddingBottom="@dimen/_10sdp"
-                        android:singleLine="true"  />
+                        android:singleLine="true"
+                        android:hint="@string/writepro"/>
 
 
 

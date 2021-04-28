@@ -49,7 +49,7 @@ public class RetrofitClient {
             @Override
             public Response intercept(Chain chain) throws IOException {
                 Request original = chain.request();
-           String credentials = Credentials.basic(HttpParams.USERNAME, HttpParams.PASSWORD);
+                String credentials = Credentials.basic(HttpParams.USERNAME, HttpParams.PASSWORD);
                 Request request = original.newBuilder()
                         .header("Authorization", credentials)
                         .method(original.method(), original.body())

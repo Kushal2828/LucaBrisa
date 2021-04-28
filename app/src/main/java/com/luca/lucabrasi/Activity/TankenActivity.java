@@ -81,10 +81,7 @@ public class TankenActivity extends BaseActivity implements OnDataResponseListne
         setTitle(getString(R.string.tanken),View.VISIBLE);
         getcarlist();
         setFilterAdapter();
-
         Log.e(TAG, "onCreate: "+mAppPreference.getCaridID() );
-
-
         etkenizichen.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -114,16 +111,6 @@ public class TankenActivity extends BaseActivity implements OnDataResponseListne
                 }
             }
         });
-
-
-
-
-
-
-
-
-
-
 
         oilgentek.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

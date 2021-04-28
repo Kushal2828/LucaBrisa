@@ -44,8 +44,6 @@
     <string name="unfallpassiert">Unfall Passiert ?</string>
     <string name="addblue">Add Blue getankt:</string>
     <string name="oilfule">Öl getankt ?</string>
-
-
     <string name="endkilo">End Kilometer</string>
     <string name="writepro">Schreiben Problem:</string>
     <string name="hintwritepro">Schreiben Problem</string>
@@ -79,6 +77,8 @@
     <string name="yes">Ja</string>
     <string name="no">Nein</string>
     <string name="daystarted_successfully">Der Tag begann erfolgreich</string>
+    <string name="problemmelden">Problem / Reklamation:</string>
+    <string name="die_nachricht_geht_direkt_an_den_chef_falls_ihr_ein_problem_mit_einem_mitarbeiter_dispatcher_oder_fuhrparkmanager_habt_schreibt_es_bitte_unten_rein">Die Nachricht geht direkt an den Chef. Falls Ihr ein Problem mit einem Mitarbeiter, Dispatcher oder Fuhrparkmanager habt schreibt es bitte unten rein.</string>
 
 
     <string-array name="array_countries">

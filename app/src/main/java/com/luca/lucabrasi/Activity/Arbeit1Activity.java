@@ -47,7 +47,6 @@ import butterknife.OnClick;
 
 public class Arbeit1Activity extends BaseActivity implements OnDataResponseListner, OnDataResponceListner {
 
-
     @BindView(R.id.spStationlist)
     Spinner spStationlist;
 
@@ -101,7 +100,7 @@ public class Arbeit1Activity extends BaseActivity implements OnDataResponseListn
 
             @Override
             public void afterTextChanged(Editable s) {
-                filter(s.toString());
+                    filter(s.toString());
                 llsuugest.setVisibility(View.VISIBLE);
             }
         });
@@ -135,9 +134,7 @@ public class Arbeit1Activity extends BaseActivity implements OnDataResponseListn
                     locationid = getString(R.string.select_station);
                     Log.e(TAG, "onItemSelected: " + locationid);
                 }
-
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
                 // your code here

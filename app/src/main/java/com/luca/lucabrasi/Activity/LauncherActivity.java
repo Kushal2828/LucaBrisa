@@ -28,10 +28,6 @@ public class LauncherActivity extends BaseActivity {
                     startActivity(new Intent(LauncherActivity.this, LoginActivity.class));
                     finish();
                 }
-               /* Intent intent = new Intent(LauncherActivity.this, LoginActivity.class);
-                startActivity(intent);
-                finish();*/
-
             }
         }, 2500);
     }

@@ -57,7 +57,6 @@ public class LoginActivity extends BaseActivity implements OnDataResponseListner
             Toast.makeText(this, getString(R.string.entervalid_password), Toast.LENGTH_SHORT).show();
         }  else  {
             if (Helper.isNetworkConnected(this)) {
-
                 CommanAPI commanAPI = new CommanAPI(HttpParams.LOGIN, this);
                 Map<String, String> params = new HashMap<>();
                 params.put(HttpParams.username,etemail.getText().toString().trim());
@@ -69,8 +68,6 @@ public class LoginActivity extends BaseActivity implements OnDataResponseListner
                 Toast.makeText(this, getString(R.string.No_Internet), Toast.LENGTH_SHORT).show();
             }
         }
-
-        // startActivity(new Intent(this, HomeActivity.class));
     }
 
     @Override
@@ -84,7 +81,7 @@ public class LoginActivity extends BaseActivity implements OnDataResponseListner
                     if (loginmodel.status.equals(HttpParams.success)) {
                         mAppPreference.setMemberID(loginmodel.data.driverId);
                         Log.e(TAG, "Response:MemberID "+ mAppPreference.getMemberID());
-                        startActivity(new Intent(this, HomeActivity.class));
+                        startActivity(new Intent(this, HomeActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK));
                     } else {
                         showLongToast(this, loginmodel.message);
                     }
@@ -98,7 +95,5 @@ public class LoginActivity extends BaseActivity implements OnDataResponseListner
             Log.e(TAG, "Response: "+response );
         }
 
-        // Log.e("TAG", "Response: " + new Gson().toJson(loginmodel));
-        // Log.e("TAG", "Response: " + new Gson().toJson(loginmodel.data));
     }
 }

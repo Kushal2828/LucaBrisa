@@ -21,7 +21,7 @@ public class Getstatusmodel {
     }
 
     public Getstatusmodel withMessage(String message) {
-        this.message = message;
+           this.message = message;
         return this;
     }
 

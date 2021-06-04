@@ -36,27 +36,28 @@
             android:id="@+id/arbeit"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_7sdp"
-            android:elevation="@dimen/_5sdp"
+            android:layout_row="0"
+            android:layout_column="0"
             android:layout_gravity=""
-            app:cardCornerRadius="@dimen/_7sdp"
-            app:cardUseCompatPadding="true"
+            android:layout_margin="@dimen/_7sdp"
+            android:clickable="true"
+            android:elevation="@dimen/_5sdp"
             android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true">
+            app:cardCornerRadius="@dimen/_7sdp"
+            app:cardUseCompatPadding="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/colorbg"
-                android:orientation="vertical"
                 android:gravity="center"
-                >
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="@dimen/_70sdp"
                     android:layout_height="@dimen/_70sdp"
-                    android:src="@drawable/ic_delivery_van"
-                    android:scaleType="centerInside"/>
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_delivery_van" />
 
                 <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
                     style="@style/txt_white_medium"
@@ -64,8 +65,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:paddingVertical="@dimen/_5sdp"
-                    android:text="@string/arbieit"
-                   />
+                    android:text="@string/arbieit" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

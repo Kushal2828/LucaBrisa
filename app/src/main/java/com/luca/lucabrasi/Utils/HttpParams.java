@@ -4,7 +4,7 @@ package com.luca.lucabrasi.Utils;
  * Created by Monil_ on 2/9/2021.
  */
 public class HttpParams {
-    public static final String BASE_URL = "http://test-bh.potenzaglobalsolutions.com/luca-brasi/api/";
+    public static final String BASE_URL = "http://lucabrasi.kpslogistik.de/api/";
     //credentials
 
     public static final String USERNAME = "f352e3ad70988bbdc547ec437713cf18";

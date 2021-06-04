@@ -216,6 +216,9 @@ public class TankenActivity extends BaseActivity implements OnDataResponseListne
                 }.getType());
                 if (commonmodel.status.equals(HttpParams.success)) {
                 showLongToast(this,getString(R.string.fuleinfoadded));
+                    Intent intent = new Intent(this, HomeActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
                 }else {
                     showLongToast(this,commonmodel.message);
                 }

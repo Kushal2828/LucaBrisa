@@ -129,7 +129,6 @@
                         android:paddingBottom="@dimen/_10sdp"
                         android:singleLine="true"  />
 
-
                     <LinearLayout
                         android:id="@+id/llsuugest"
                         android:layout_width="match_parent"

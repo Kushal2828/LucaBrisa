@@ -63,7 +63,6 @@ public class Arbeit1Activity extends BaseActivity implements OnDataResponseListn
     @BindView(R.id.ettrankstand)
     SeekBar ettrankstand;
 
-
     @BindView(R.id.rv_filter)
     RecyclerView rv_filter;
 
@@ -231,8 +230,6 @@ public class Arbeit1Activity extends BaseActivity implements OnDataResponseListn
                         Toast.makeText(this, getString(R.string.No_Internet), Toast.LENGTH_SHORT).show();
                     }
                 }
-
-
                // startActivity(new Intent(this, Arbeit2Activity.class));
                 break;
         }

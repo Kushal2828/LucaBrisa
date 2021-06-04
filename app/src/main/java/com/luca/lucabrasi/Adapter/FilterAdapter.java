@@ -28,14 +28,12 @@ public class FilterAdapter extends  RecyclerView.Adapter<FilterAdapter.ViewHolde
     Context context;
     OnDataResponceListner onDataResponceListner;
 
-
     public FilterAdapter(List<Carlistmodel.Datum> carlist, Context context, OnDataResponceListner onDataResponceListner) {
         this.carlist = carlist;
         this.context = context;
         this.onDataResponceListner = onDataResponceListner;
     }
 
-    @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
@@ -46,7 +44,8 @@ public class FilterAdapter extends  RecyclerView.Adapter<FilterAdapter.ViewHolde
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Log.e("TAG", "onBindViewHolder: " );
-            holder.tvname.setText(carlist.get(position).carNoplate);
+        holder.tvname.setText(carlist.get(position).carNoplate);
+
 
             holder.tvname.setOnClickListener(new View.OnClickListener() {
                 @Override

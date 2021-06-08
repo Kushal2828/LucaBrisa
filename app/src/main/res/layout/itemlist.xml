@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:background="#EDBAD4">
 
-    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+    <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
         android:id="@+id/textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

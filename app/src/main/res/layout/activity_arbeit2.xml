@@ -20,7 +20,7 @@
             android:layout_margin="@dimen/_15sdp"
             android:orientation="vertical">
 
-            <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+            <com.app.LucaBrasi.CustomViews.Textview.BoldTextView
                 style="@style/txt_black_large"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
                             android:orientation="horizontal">
 
 
-                            <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                            <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                                 android:id="@+id/tvstartHour"
                                 style="@style/txt_black_medium"
                                 android:layout_width="wrap_content"
@@ -74,7 +74,7 @@
                                 android:text="00"
                                 android:textColor="@color/purple_200" />
 
-                            <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                            <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                                 android:id="@+id/startcolonOne"
                                 style="@style/txt_black_medium"
                                 android:layout_width="wrap_content"
@@ -85,7 +85,7 @@
                                 android:textColor="@color/purple_200"
                                 android:textSize="@dimen/_10sdp" />
 
-                            <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                            <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                                 android:id="@+id/tvstartMinute"
                                 style="@style/txt_black_medium"
                                 android:layout_width="wrap_content"
@@ -97,7 +97,7 @@
                                 android:text="00"
                                 android:textColor="@color/purple_200" />
 
-                            <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                            <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                                 android:id="@+id/startcolonTwo"
                                 style="@style/txt_black_medium"
                                 android:layout_width="wrap_content"
@@ -108,7 +108,7 @@
                                 android:textColor="@color/purple_200"
                                 android:textSize="@dimen/_10sdp" />
 
-                            <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                            <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                                 android:id="@+id/tvstartSecond"
                                 style="@style/txt_black_medium"
                                 android:layout_width="wrap_content"
@@ -143,7 +143,7 @@
                         android:orientation="horizontal">
 
 
-                        <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+                        <com.app.LucaBrasi.CustomViews.Textview.BoldTextView
                             android:id="@+id/tvHour"
                             style="@style/txt_black_extralarge"
                             android:layout_width="wrap_content"
@@ -156,7 +156,7 @@
                             android:text="00"
                             android:textColor="@color/purple_200" />
 
-                        <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                             android:id="@+id/colonOne"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -165,7 +165,7 @@
                             android:text=":"
                             android:textSize="@dimen/_20sdp" />
 
-                        <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+                        <com.app.LucaBrasi.CustomViews.Textview.BoldTextView
                             android:id="@+id/tvMinute"
                             style="@style/txt_black_extralarge"
                             android:layout_width="wrap_content"
@@ -177,7 +177,7 @@
                             android:text="00"
                             android:textColor="@color/purple_200" />
 
-                        <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                             android:id="@+id/colonTwo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -186,7 +186,7 @@
                             android:text=":"
                             android:textSize="@dimen/_20sdp" />
 
-                        <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+                        <com.app.LucaBrasi.CustomViews.Textview.BoldTextView
                             android:id="@+id/tvSecond"
                             style="@style/txt_black_extralarge"
                             android:layout_width="wrap_content"
@@ -235,7 +235,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                    <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                         android:id="@+id/tvfertig"
                         style="@style/txt_black_medium"
                         android:layout_width="match_parent"

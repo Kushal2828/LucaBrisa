@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/_4sdp"
             android:src="@drawable/lucabraciwhite" />
-        <com.luca.lucabrasi.CustomViews.Textview.MediumTextView
+        <com.app.LucaBrasi.CustomViews.Textview.MediumTextView
             android:id="@+id/tvTitle"
             style="@style/txt_black_large"
             android:layout_width="match_parent"

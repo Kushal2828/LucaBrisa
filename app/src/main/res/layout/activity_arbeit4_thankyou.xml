@@ -19,7 +19,7 @@
             android:layout_margin="@dimen/_15sdp"
             android:orientation="vertical">
 
-            <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+            <com.app.LucaBrasi.CustomViews.Textview.BoldTextView
                 style="@style/txt_black_large"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
                 android:orientation="horizontal"
                 android:padding="@dimen/_5sdp">
 
-                <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                     android:id="@+id/tvgotohome"
                     style="@style/txt_black_medium"
                     android:layout_width="match_parent"

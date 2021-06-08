@@ -59,7 +59,7 @@
                     android:scaleType="centerInside"
                     android:src="@drawable/ic_delivery_van" />
 
-                <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                     style="@style/txt_white_medium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
                     android:scaleType="centerInside"
                     android:padding="@dimen/_9sdp"/>
 
-                <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                     style="@style/txt_white_medium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -130,7 +130,7 @@
                     android:scaleType="centerInside"
                     android:padding="@dimen/_9sdp"/>
 
-                <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                     style="@style/txt_white_medium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -167,7 +167,7 @@
                     android:scaleType="centerInside"
                     android:padding="@dimen/_9sdp"/>
 
-                <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                     style="@style/txt_white_medium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

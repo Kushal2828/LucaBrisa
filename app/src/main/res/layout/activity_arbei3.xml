@@ -23,7 +23,7 @@
                 android:layout_margin="@dimen/_15sdp"
                 android:orientation="vertical">
 
-                <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+                <com.app.LucaBrasi.CustomViews.Textview.BoldTextView
                     style="@style/txt_black_large"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
                     android:orientation="vertical">
 
 
-                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                    <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                         style="@style/txt_black_medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
                         android:text="@string/endkilo" />
 
 
-                    <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
+                    <com.app.LucaBrasi.CustomViews.EditText.RegularEditText
                         android:id="@+id/etendkilo"
                         style="@style/txt_black_small"
                         android:layout_width="match_parent"
@@ -72,7 +72,7 @@
 
 
 
-                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                    <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                         style="@style/txt_black_medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -95,14 +95,14 @@
                         android:layout_height="wrap_content"
                         android:padding="@dimen/_5sdp">
 
-                        <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                             style="@style/txt_gray_small"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="0%" />
 
-                        <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                        <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                             android:id="@+id/tvlevel"
                             style="@style/txt_gray_small"
                             android:layout_width="wrap_content"
@@ -125,7 +125,7 @@
                             android:layout_weight="1"
                             android:padding="@dimen/_5sdp">
 
-                            <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+                            <com.app.LucaBrasi.CustomViews.Textview.BoldTextView
                                 style="@style/txt_black_medium"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -170,7 +170,7 @@
                     android:layout_marginBottom="@dimen/_20sdp"
                     android:orientation="horizontal">
 
-                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                    <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                         android:id="@+id/tvendday"
                         style="@style/txt_black_medium"
                         android:layout_width="match_parent"

@@ -24,7 +24,7 @@
     android:layout_height="0dp"
     android:layout_weight="1"
     android:gravity="bottom|center">
-    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+    <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
         android:id="@+id/tvSplashText"
         style="@style/txt_gray_micro"
         android:layout_width="wrap_content"

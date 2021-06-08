@@ -27,7 +27,7 @@
                 android:layout_margin="@dimen/_15sdp"
                 android:orientation="vertical">
 
-                <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+                <com.app.LucaBrasi.CustomViews.Textview.BoldTextView
                     style="@style/txt_black_large"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
 
 
 
-                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                    <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                         style="@style/txt_black_medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
                         android:layout_marginTop="@dimen/_7sdp"
                         android:background="@drawable/bg"
                         android:orientation="vertical">
-                        <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
+                        <com.app.LucaBrasi.CustomViews.EditText.RegularEditText
                             android:id="@+id/etkenizichen"
                             style="@style/txt_black_small"
                             android:layout_width="match_parent"
@@ -127,7 +127,7 @@
 
 
 
-                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                    <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                         style="@style/txt_black_medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -135,7 +135,7 @@
                         android:text="@string/kilostand" />
 
 
-                    <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
+                    <com.app.LucaBrasi.CustomViews.EditText.RegularEditText
                         android:id="@+id/etkilometer"
                         style="@style/txt_black_small"
                         android:layout_width="match_parent"
@@ -155,7 +155,7 @@
 
 
 
-                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                    <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                         style="@style/txt_black_medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -163,7 +163,7 @@
                         android:text="@string/zapfule" />
 
 
-                    <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
+                    <com.app.LucaBrasi.CustomViews.EditText.RegularEditText
                         android:id="@+id/etzapcode"
                         style="@style/txt_black_small"
                         android:layout_width="match_parent"
@@ -181,7 +181,7 @@
                         android:singleLine="true"/>
 
 
-                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                    <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                         style="@style/txt_black_medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -189,7 +189,7 @@
                         android:text="@string/disleliter" />
 
 
-                    <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
+                    <com.app.LucaBrasi.CustomViews.EditText.RegularEditText
                         android:id="@+id/etdiesel"
                         style="@style/txt_black_small"
                         android:layout_width="match_parent"
@@ -208,7 +208,7 @@
 
 
 
-                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                    <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                         style="@style/txt_black_medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -216,7 +216,7 @@
                         android:text="@string/euro" />
 
 
-                    <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
+                    <com.app.LucaBrasi.CustomViews.EditText.RegularEditText
                         android:id="@+id/eteuro"
                         style="@style/txt_black_small"
                         android:layout_width="match_parent"
@@ -250,7 +250,7 @@
                             android:layout_weight="1"
                             android:padding="@dimen/_5sdp">
 
-                            <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+                            <com.app.LucaBrasi.CustomViews.Textview.BoldTextView
                                 style="@style/txt_black_medium"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -285,7 +285,7 @@
                             android:layout_weight="1"
                             android:padding="@dimen/_5sdp">
 
-                            <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+                            <com.app.LucaBrasi.CustomViews.Textview.BoldTextView
 
                                 style="@style/txt_black_medium"
                                 android:layout_width="wrap_content"
@@ -320,7 +320,7 @@
                     android:layout_marginBottom="@dimen/_20sdp"
                     android:orientation="horizontal">
 
-                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                    <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                         android:id="@+id/tvaddfule"
                         style="@style/txt_black_medium"
                         android:layout_width="match_parent"

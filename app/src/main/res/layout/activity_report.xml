@@ -32,7 +32,7 @@
                 android:layout_margin="@dimen/_15sdp"
                 android:orientation="vertical">
 
-                <com.luca.lucabrasi.CustomViews.Textview.BoldTextView
+                <com.app.LucaBrasi.CustomViews.Textview.BoldTextView
                     style="@style/txt_black_large"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:orientation="vertical">
 
-                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                    <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                         style="@style/txt_black_small"
                         android:textColor="@color/grey"
                         android:layout_width="match_parent"
@@ -64,7 +64,7 @@
 
 
 
-                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                    <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                         style="@style/txt_black_medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
 
 
 
-                    <com.luca.lucabrasi.CustomViews.EditText.RegularEditText
+                    <com.app.LucaBrasi.CustomViews.EditText.RegularEditText
                         android:id="@+id/etmessage"
                         style="@style/txt_black_small"
                         android:layout_width="match_parent"
@@ -114,15 +114,6 @@
                         android:hint="@string/writepro"/>
 
 
-
-
-
-
-
-
-
-
-
                 </LinearLayout>
 
                 <FrameLayout
@@ -132,7 +123,7 @@
                     android:layout_marginBottom="@dimen/_20sdp"
                     android:orientation="horizontal">
 
-                    <com.luca.lucabrasi.CustomViews.Textview.RegularTextView
+                    <com.app.LucaBrasi.CustomViews.Textview.RegularTextView
                         android:id="@+id/tvsubmit"
                         style="@style/txt_black_medium"
                         android:layout_width="match_parent"
